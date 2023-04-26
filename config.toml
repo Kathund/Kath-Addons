@@ -1,0 +1,31 @@
+
+[settings]
+
+	[settings.gardens]
+		visitor_alert = false
+
+	[settings.dungeons]
+		cyber_bully_dungeons = false
+		blood_ready = false
+		bloud_ready = false
+		"f4/m4_spirit_bow_esp" = false
+		"f4/m4_spirit_bear_esp" = false
+
+	[settings.party]
+		frag_bot = false
+		auto_party_accept = true
+
+	[settings.misc]
+		gift_waypoints = false
+		"anti_mvp+/++_join_messages" = true
+		arrow_warning = false
+		anti_hype_messages = true
+		anti_combo = false
+		color_picker = "255,61,61,122"
+		cyber_bully_dungeons = false
+		anti_gexp = true
+		cyber_bully = false
+
+[other]
+	aadfdsfsdfgdfghdfhggfdhf_party_accept = true
+
