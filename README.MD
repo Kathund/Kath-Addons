@@ -36,10 +36,8 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 ## Change Log
 
 ## v1.1.0
-
-- Added new Fetures
-  - Dungeons
-    - Auto Dungeon Restart - **Usage of this may resualt in a ban! Use at your own risk** - Automatically restarts the dungeon after the dungeon ends
+- Made quiver alert also support the notification for 10 arrows
+- Added Auto Dungeon Restart - **Usage of this may resualt in a ban! Use at your own risk** - Automatically restarts the dungeon after the dungeon ends
 
 ### v1.0.0
 
