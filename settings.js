@@ -23,7 +23,7 @@ class Settings {
 
     @SwitchProperty({
         name: "Cyber Bully Dungeons",
-        description: "Will post peoples fails messages in all and party chat",
+        description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples fails messages in all and party chat",
         category: "Settings",
         subcategory: "Dungeons",
     })
@@ -87,7 +87,7 @@ class Settings {
 
     @SwitchProperty({
         name: "Cyber Bully",
-        description: "Will post peoples death messages in all and party chat",
+        description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
         category: "Settings",
         subcategory: "Misc",
     })
@@ -108,14 +108,6 @@ class Settings {
         subcategory: "Misc",
     })
     miscAntiMVPPlusPlus = false;
-
-    @SwitchProperty({
-        name: "Anti Hype Messages",
-        description: "Hides the max hype messages from showing up in your chat",
-        category: "Settings",
-        subcategory: "Misc",
-    })
-    miscAntiHypeLimit = false;
 
     @SwitchProperty({
         name: "Anti Hype Messages",
@@ -150,6 +142,17 @@ class Settings {
         placeholder: " "
     })
     infoDev() { };
+
+    @ButtonProperty({
+        name: "Auto Welcome Back",
+        description: "A Simple Chat triggers module that alows you to welcome guild members back when they join and is highly customizable",
+        category: "Extra Info",
+        subcategory: "Other Projects",
+        placeholder: "import"
+    })
+    otherProjectsAutoWelcomeBack() {
+        ChatLib.command(`ct improt AutoWelcomeBack`);
+    };
 
     constructor() {
         this.initialize(this);
