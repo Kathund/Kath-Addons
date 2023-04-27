@@ -1,7 +1,7 @@
 {
   "name": "Kath Addons",
   "author": "Kath",
-  "description": "Some changes for hypixel skyblock",
+  "description": "A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures read the features list for more info.",
   "helpMessage": "/kath",
   "version": "1.0.0",
   "entry": "index.js",
