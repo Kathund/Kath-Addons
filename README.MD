@@ -1,4 +1,5 @@
-# Kath Addons - Kathund#2004
+# Kath Addons - Kathund#2004 
+[Chattrigger Module](https://www.chattriggers.com/modules/v/KathAddons)
 
 ## Description
 
