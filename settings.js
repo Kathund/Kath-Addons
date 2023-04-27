@@ -1,5 +1,5 @@
 let currentVersion = JSON.parse(FileLib.read("kathAddons", "metadata.json")).version
-import { @Vigilant, @ButtonProperty, @SwitchProperty} from 'Vigilance';
+import { @Vigilant, @ButtonProperty, @SwitchProperty } from 'Vigilance';
 @Vigilant('KathAddons', 'Kath Addons', {
     getCategoryComparator: () => (a, b) => {
         const categories = ['Settings', 'Extra Info'];
@@ -28,6 +28,24 @@ class Settings {
         subcategory: "Dungeons",
     })
     dungeonsCyberBully = false;
+
+    @SwitchProperty({
+        name: "Auto Dungeon Restart",
+        description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rAutomatically restarts the dungeon after the dungeon ends",
+        category: "Settings",
+        subcategory: "Dungeons",
+    })
+    dungeonsAutoRestart = false;
+
+    @SliderProperty({
+        name: "Auto Dungeon delay",
+        description: "Change how long the delay is (in milliseconds - 1000ms = 1 second)",
+        category: "Settings",
+        subcategory: "Dungeons",
+        min: 1000,
+        max: 3000
+    })
+    dungeonsAutoRestartDelay = 12000;
 
     @SwitchProperty({
         name: "F4/M4 Spirit Bow ESP",
@@ -124,6 +142,16 @@ class Settings {
         subcategory: "Misc",
     })
     miscAntiCombo = false;
+
+    @SliderProperty({
+        name: "Anti Non",
+        description: "Hidding messages from a player under a set skyblock level (needs skyblock levels in chat on)",
+        category: "Settings",
+        subcategory: "Misc",
+        min: 0,
+        max: 398
+    })
+    miscAntiNon = 20;
 
     @ButtonProperty({
         name: "&6&lVersion",

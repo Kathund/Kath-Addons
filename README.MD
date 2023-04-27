@@ -1,4 +1,5 @@
-# Kath Addons - Kathund#2004 
+# Kath Addons - Kathund#2004
+
 [Chattrigger Module](https://www.chattriggers.com/modules/v/KathAddons)
 
 ## Description
@@ -10,6 +11,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Dungeons
   - Blood Ready - Displays a message on your screen when the watcher has spawned all the mobs
   - Cyber Bully Dungeons - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples fails messages in all and party chat
+  - Auto Dungeon Restart - **Usage of this may resualt in a ban! Use at your own risk** - Automatically restarts the dungeon after the dungeon ends
   - F4/M4 Spirit Bow ESP - **Usage of this may resualt in a ban! Use at your own risk** - Shows a box arround the spirit bow
   - F4/M4 Spirit Bear ESP - **Usage of this may resualt in a ban! Use at your own risk** - Shows a box arround the spirit bear
 - Gardens
@@ -32,6 +34,12 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - `/kath` - Open the GUI
 
 ## Change Log
+
+## v1.1.0
+
+- Added new Fetures
+  - Dungeons
+    - Auto Dungeon Restart - **Usage of this may resualt in a ban! Use at your own risk** - Automatically restarts the dungeon after the dungeon ends
 
 ### v1.0.0
 
