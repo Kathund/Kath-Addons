@@ -109,6 +109,14 @@ register('chat', (event) => {
   }
 })
 
+register('chat', (event) => {
+  var message = (ChatLib.getChatMessage(event)).toString();
+  if (!config.miscAntiSBE) return;
+  if (message.includes("[SBE]")) {
+    cancel(event)
+  }
+})
+
 register("renderWorld", () => {
   if (!config.miscGiftWaypoints) return;
   Waypoints.forEach(waypoint => {

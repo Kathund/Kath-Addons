@@ -1,157 +1,172 @@
 let currentVersion = JSON.parse(FileLib.read("kathAddons", "metadata.json")).version
-import { @Vigilant, @ButtonProperty, @SwitchProperty } from 'Vigilance';
+import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
 @Vigilant('KathAddons', 'Kath Addons', {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['Settings', 'Extra Info'];
+        const categories = ['Dungeons', 'Gardens', 'Party', 'Misc', 'Extra Info'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     },
     getSubcategoryComparator: () => (a, b) => {
-        const subcategories = ["Dungeons", "Gardens", "Party", "Misc", "Info", "Other Projects", "Credits"];
+        const subcategories = ["General", "Info", "Other Projects", "Credits"];
         return subcategories.indexOf(a.getValue()[0].attributesExt.subcategory) -
             subcategories.indexOf(b.getValue()[0].attributesExt.subcategory);
     },
 })
 
 class Settings {
+    // ! Dungeons
     @SwitchProperty({
         name: "Blood Ready",
         description: "Displays a message on your screen when the watcher has spawned all the mobs",
-        category: "Settings",
-        subcategory: "Dungeons",
+        category: "Dungeons",
+        subcategory: "General",
     })
     dungeonsBloodAlert = false;
 
     @SwitchProperty({
         name: "Cyber Bully Dungeons",
         description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples fails messages in all and party chat",
-        category: "Settings",
-        subcategory: "Dungeons",
+        category: "Dungeons",
+        subcategory: "General",
     })
     dungeonsCyberBully = false;
 
     @SwitchProperty({
         name: "Auto Dungeon Restart",
         description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rAutomatically restarts the dungeon after the dungeon ends",
-        category: "Settings",
-        subcategory: "Dungeons",
+        category: "Dungeons",
+        subcategory: "General",
     })
     dungeonsAutoRestart = false;
 
     @SliderProperty({
         name: "Auto Dungeon delay",
         description: "Change how long the delay is (in milliseconds - 1000ms = 1 second)",
-        category: "Settings",
-        subcategory: "Dungeons",
+        category: "Dungeons",
+        subcategory: "General",
         min: 1000,
-        max: 3000
+        max: 30000
     })
     dungeonsAutoRestartDelay = 12000;
 
     @SwitchProperty({
         name: "F4/M4 Spirit Bow ESP",
         description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bow",
-        category: "Settings",
-        subcategory: "Dungeons",
+        category: "Dungeons",
+        subcategory: "General",
     })
     dungeonsSpiritBowESP = false;
 
     @SwitchProperty({
         name: "F4/M4 Spirit Bear ESP",
         description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bear",
-        category: "Settings",
-        subcategory: "Dungeons",
+        category: "Dungeons",
+        subcategory: "General",
     })
     dungeonsSpiritBearESP = false;
+
+    // ! Gardens
 
     @SwitchProperty({
         name: "Visitor Alert",
         description: "Shows a warning on your screen when a visitor joins your garden",
-        category: "Settings",
-        subcategory: "Gardens",
+        category: "Gardens",
+        subcategory: "General",
     })
     gardenVisitorAlert = false;
+
+    // ! Party
 
     @SwitchProperty({
         name: "Auto party accept",
         description: "Will auto accept any party invite sent to you",
-        category: "Settings",
-        subcategory: "Party",
+        category: "Party",
+        subcategory: "General",
     })
     partyAccept = false;
 
     @SwitchProperty({
         name: "Frag bot",
         description: "Turns your account into a frag bot",
-        category: "Settings",
-        subcategory: "Party",
+        category: "Party",
+        subcategory: "General",
     })
     partyFragBot = false;
+
+    // ! Misc
 
     @SwitchProperty({
         name: "Arrow Warning",
         description: "Shows a warning on your screen when you have 50 or 10 arrows left",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscArrowWarning = false;
 
     @SwitchProperty({
         name: "Gift Waypoints",
         description: "Waypoints to all the possible spawn locations for gifts in the jerrys workshop event",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscGiftWaypoints = false;
 
     @SwitchProperty({
         name: "Cyber Bully",
         description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscCyberBully = false;
 
     @SwitchProperty({
         name: "Anti GEXP",
         description: "Hides the gexp messages when playing skyblock",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscAntiGexp = false;
 
     @SwitchProperty({
         name: "Anti MVP+/++ Join Messages",
         description: "Hides the MVP+/++ lobby join messages from showing up in your chat",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscAntiMVPPlusPlus = false;
 
     @SwitchProperty({
         name: "Anti Hype Messages",
         description: "Hides the max hype messages from showing up in your chat",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscAntiHypeLimit = false;
 
     @SwitchProperty({
         name: "Anti Combo",
         description: "A settings that makes it so u cant be comboed and it will auto combo for u (hides the combo messages from the grandma wolf)",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
     })
     miscAntiCombo = false;
 
     @SliderProperty({
         name: "Anti Non",
         description: "Hidding messages from a player under a set skyblock level (needs skyblock levels in chat on)",
-        category: "Settings",
-        subcategory: "Misc",
+        category: "Misc",
+        subcategory: "General",
         min: 0,
         max: 398
     })
     miscAntiNon = 20;
+
+    @SwitchProperty({
+        name: "Anti SBE",
+        description: "Hidding any message containing [SBE] in it",
+        category: "Misc",
+        subcategory: "General",
+    })
+    miscAntiSBE = false;
 
     @ButtonProperty({
         name: "&6&lVersion",
