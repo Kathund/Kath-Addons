@@ -168,6 +168,14 @@ class Settings {
     })
     miscAntiSBE = false;
 
+    @SwitchProperty({
+        name: "Anti Tip",
+        description: "Sick of the auto tip messages? Just hide them",
+        category: "Misc",
+        subcategory: "General",
+    })
+    miscAntiTip = false;
+
     @ButtonProperty({
         name: "&6&lVersion",
         description: `Current Module Version ${currentVersion}`,
