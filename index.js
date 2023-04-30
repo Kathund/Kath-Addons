@@ -5,6 +5,14 @@ const config = Settings
 const Waypoints = [[7, 87, 85], [41, 79, 81], [76, 76, 55], [91, 76, 38], [78, 77, 40], [82, 78, 26], [61, 78, 92], [94, 77, 42], [63, 76, 95], [103, 74, 98], [50, 80, 88], [35, 80, 71], [45, 79, 70], [79, 80, 73], [50, 76, 52], [95, 76, 58], [98, 78, 75], [55, 79, 34], [64, 78, 28], [58, 79, 89], [90, 77, 46], [60, 76, 51], [45, 79, 49], [89, 77, 84], [92, 74, 108], [75, 82, 20], [47, 77, 65], [97, 80, 77], [42, 77, 58], [51, 76, 52], [55, 80, 38], [63, 76, 52], [52, 75, 45], [73, 79, 52], [66, 81, 28], [78, 74, 99], [104, 78, 68], [39, 80, 73], [43, 79, 73], [36, 80, 80], [95, 76, 59], [97, 75, 70], [97, 81, 77], [46, 80, 84], [32, 80, 74], [43, 77, 50], [50, 79, 34], [90, 77, 38], [98, 77, 76], [73, 76, 31], [91, 77, 27]];
 
 register("command", () => config.openGUI()).setName("kath");
+register("command", () => ChatLib.comand('/ac §')).setName("limbo");
+
+register("chat", function (event) {
+  const message = (ChatLib.getChatMessage(event)).toString()
+  if (message.includes('Illegal characters in chat')) {
+    cancel(event)
+  }
+})
 
 register("chat", function (event) {
   const message = (ChatLib.getChatMessage(event)).toString()
@@ -117,6 +125,14 @@ register('chat', (event) => {
   }
 })
 
+register('chat', (event) => {
+  var message = (ChatLib.getChatMessage(event)).toString();
+  if (!config.miscAntiTip) return;
+  if (message.includes("You tipped") || message.includes("You've already tipped someone in the past hour")) {
+    cancel(event)
+  }
+})
+
 register("renderWorld", () => {
   if (!config.miscGiftWaypoints) return;
   Waypoints.forEach(waypoint => {
@@ -124,32 +140,19 @@ register("renderWorld", () => {
   });
 })
 
-let boss = false;
 let bows = [];
 
-register("worldLoad", () => {
-  boss = false;
-})
-
-register("chat", () => {
-  if (!config.dungeonsSpiritBowESP) return;
-  if (!config.dungeonsSpiritBearESP) return;
-  boss = true;
-}).setCriteria(/\[BOSS\] Thorn.+/)
-
 register("renderWorld", () => {
-  if (!boss) return;
   bows.forEach(bow => {
     if (config.dungeonsSpiritBowESP && bow.getName().includes("Spirit Bow")) {
-      RenderLib.drawBaritoneEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), .75, 5, 255, 215, 0, 1, false)
+      RenderLib.drawEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), .75, 5, 255, 215, 0, 1, true)
     } else if (config.spiritBearEsp && bow.getName().includes("Spirit Bear")) {
-      RenderLib.drawBaritoneEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), .75, 5, 0, 215, 0, 1, false)
+      RenderLib.drawEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), .75, 5, 0, 215, 0, 1, true)
     }
   })
 })
 
 register("step", () => {
-  if (!boss) return;
   if (!config.dungeonsSpiritBearESP && !config.dungeonsSpiritBowESP) return;
   new Thread(() => bows = World.getAllEntities().filter(e => e.getName().includes("Spirit"))).start();
 }).setFps(2)
