@@ -76,7 +76,7 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscCyberBully) return;
+  if (!config.chatCyberBully) return;
   if (message.startsWith(" ☠") && message.includes("was killed by")) {
     ChatLib.command(`pc ${message}`);
     ChatLib.command(`ac ${message}`);

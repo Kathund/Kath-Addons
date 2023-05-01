@@ -30,10 +30,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
   - Anti Non (People without a rank) - Hidding messages from players that dont have a rank"
   - Anti SBE - Hidding any message containing \[SBE\] in it
   - Anti Tip - Sick of the auto tip messages? Just hide them
+  - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the jerrys workshop event
-  - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
 
 ## Commands
 

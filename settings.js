@@ -171,6 +171,14 @@ class Settings {
     })
     chatCoopPing = false;
 
+    @SwitchProperty({
+        name: "Cyber Bully",
+        description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatCyberBully = false;
+
     // ! Misc
 
     @SwitchProperty({
@@ -189,13 +197,7 @@ class Settings {
     })
     miscGiftWaypoints = false;
 
-    @SwitchProperty({
-        name: "Cyber Bully",
-        description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscCyberBully = false;
+    // ! Extra Info
 
     @ButtonProperty({
         name: "&6&lVersion",
