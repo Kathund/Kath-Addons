@@ -160,6 +160,14 @@ class Settings {
     })
     miscAntiNon = 20;
 
+    @SliderProperty({
+        name: "Anti Non (People without a rank)",
+        description: "Hidding messages from players that dont have a rank",
+        category: "Misc",
+        subcategory: "General"
+    })
+    miscAntiNonRank = false;
+
     @SwitchProperty({
         name: "Anti SBE",
         description: "Hidding any message containing [SBE] in it",
