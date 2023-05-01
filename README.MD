@@ -27,7 +27,6 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
   - Anti Hype Messages - Hides the max hype messages from showing up in your chat
   - Anti Combo - A settings that makes it so u cant be comboed and it will auto combo for u (hides the combo messages from the grandma wolf)
   - Anti Non - Hidding messages from a player under a set skyblock level (needs skyblock levels in chat on)
-  - Anti Non (People without a rank) - Hidding messages from players that dont have a rank"
   - Anti SBE - Hidding any message containing \[SBE\] in it
   - Anti Tip - Sick of the auto tip messages? Just hide them
   - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
@@ -50,7 +49,6 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Added Auto Dungeon Restart - **Usage of this may resualt in a ban! Use at your own risk** - Automatically restarts the dungeon after the dungeon ends
 - Changed how the GUI is ordered (Will reset the end users config)
 - Added Anti Non - Hidding messages from a player under a set skyblock level (needs skyblock levels in chat on)
-- Added Anti Non (People without a rank) - Hidding messages from players that dont have a rank"
 - Added Anti SBE - Hidding any message containing \[SBE\] in it
 - Added Anti Tip - Sick of the auto tip messages? Just hide them
 - Added Coop Chat Ping - Plays the ding sound when someone types in coop chat
