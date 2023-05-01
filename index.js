@@ -47,6 +47,8 @@ register('chat', (event) => {
   if (message.includes("[BOSS] The Watcher: That will be enough for now.")) {
     if (!config.dungeonsBloodAlert) return;
     Client.showTitle("&cBlood Ready!", "", 1, 30, 1)
+    if (!config.generalAlertSound) return;
+    World.playSound("random.orb", 2, 1);
   }
 })
 
@@ -54,7 +56,9 @@ register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
   if (message.includes("You only have 50") && message.includes("left in your Quiver!") || message.includes("You only have 10") && message.includes("left in your Quiver!")) {
     if (!config.miscArrowWarning) return;
-    Client.showTitle("&cLow Arrows!", "", 1, 30, 1)
+    Client.showTitle("&cLow Arrows!", "", 1, 30, 1);
+    if (!config.generalAlertSound) return;
+    World.playSound("random.orb", 2, 1);
   }
 })
 
@@ -64,7 +68,9 @@ register('chat', (event) => {
     if (!config.gardenVisitorAlert) return;
     const words = message.split(' ');
     const name = words.slice(0, words.indexOf('has')).join(' ');
-    Client.showTitle(`&b&l${name} &r&fhas arrived on your Garden!`, "", 1, 30, 1)
+    Client.showTitle(`&b&l${name} &r&fhas arrived on your Garden!`, "", 1, 30, 1);
+    if (!config.generalAlertSound) return;
+    World.playSound("random.orb", 2, 1);
   }
 })
 
@@ -88,7 +94,7 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscAntiGexp) return;
+  if (!config.chatAntiGexp) return;
   if (message.startsWith("You earned") && message.includes("from playing SkyBlock!")) {
     cancel(event)
   }
@@ -96,7 +102,7 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscAntiMVPPlusPlus) return;
+  if (!config.chatAntiMVPPlusPlus) return;
   if (message.includes("joined the lobby!")) {
     cancel(event)
   }
@@ -104,7 +110,7 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscAntiHypeLimit) return;
+  if (!config.chatAntiHypeLimit) return;
   if (message.includes("You have reached your Hype limit! Add Hype to Prototype Lobby minigames by right-clicking with the Hype Diamond!")) {
     cancel(event)
   }
@@ -112,7 +118,7 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscAntiCombo) return;
+  if (!config.chatAntiCombo) return;
   if (message.includes("Kill Combo")) {
     cancel(event)
   }
@@ -120,7 +126,7 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscAntiSBE) return;
+  if (!config.chatAntiSBE) return;
   if (message.includes("[SBE]")) {
     cancel(event)
   }
@@ -128,11 +134,16 @@ register('chat', (event) => {
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.miscAntiTip) return;
+  if (!config.chatAntiTip) return;
   if (message.includes("You tipped") || message.includes("You've already tipped someone in the past hour")) {
     cancel(event)
   }
 })
+
+register("chat", () => {
+  if (!config.chatCoopPing) return;
+  World.playSound("random.orb", 2, 1);
+}).setCriteria("&r&bCo-op > ${*}");
 
 register("renderWorld", () => {
   if (!config.miscGiftWaypoints) return;

@@ -8,6 +8,8 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 
 ## Feture List
 
+- General
+  - Alert Sound - Plays a sound when an alert gets displayed
 - Dungeons
   - Blood Ready - Displays a message on your screen when the watcher has spawned all the mobs
   - Cyber Bully Dungeons - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples fails messages in all and party chat
@@ -19,10 +21,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Party
   - Auto party accept - Will auto accept any party invite sent to you
   - Frag bot - Turns your account into a frag bot
-- Misc
-  - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
-  - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the jerrys workshop event
-  - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
+- Chat
   - Anti GEXP - Hides the gexp messages when playing skyblock
   - Anti MVP+/++ Join Messages - Hides the MVP+/++ lobby join messages from showing up in your chat
   - Anti Hype Messages - Hides the max hype messages from showing up in your chat
@@ -31,12 +30,17 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
   - Anti Non (People without a rank) - Hidding messages from players that dont have a rank"
   - Anti SBE - Hidding any message containing \[SBE\] in it
   - Anti Tip - Sick of the auto tip messages? Just hide them
+- Misc
+  - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
+  - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the jerrys workshop event
+  - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
 
 ## Commands
 
 `< >` = Required arguments, `[ ]` = Optional arguments
 
 - `/kath` - Open the GUI
+- `/limbo` - Sends the user to limbo 
 
 ## Change Log
 
@@ -49,6 +53,9 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Added Anti Non (People without a rank) - Hidding messages from players that dont have a rank"
 - Added Anti SBE - Hidding any message containing \[SBE\] in it
 - Added Anti Tip - Sick of the auto tip messages? Just hide them
+- Added Coop Chat Ping - Plays the ding sound when someone types in coop chat
+- Added `/limbo` - Sneds the user to limbo
+- Added Alert Sound - Plays a sound when an alert gets displayed
 
 ### v1.0.0
 
@@ -65,7 +72,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
     - Auto party accept - Will auto accept any party invite sent to you
     - Frag bot - Turns your account into a frag bot
   - Misc
-    - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
+    - Arrow Warning - Shows a warning on your screen when you have 50 arrows left
     - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the jerrys workshop event
     - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
     - Anti GEXP - Hides the gexp messages when playing skyblock

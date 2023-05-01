@@ -2,7 +2,7 @@ let currentVersion = JSON.parse(FileLib.read("kathAddons", "metadata.json")).ver
 import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
 @Vigilant('KathAddons', 'Kath Addons', {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['Dungeons', 'Gardens', 'Party', 'Misc', 'Extra Info'];
+        const categories = ['General', 'Dungeons', 'Gardens', 'Party', 'Misc', 'Extra Info'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     },
     getSubcategoryComparator: () => (a, b) => {
@@ -13,7 +13,18 @@ import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vi
 })
 
 class Settings {
+    // ! General
+
+    @SwitchProperty({
+        name: "Alert Sound",
+        description: "Plays a sound when an alert gets displayed",
+        category: "General",
+        subcategory: "i dont know",
+    })
+    generalAlertSound = false;
+
     // ! Dungeons
+
     @SwitchProperty({
         name: "Blood Ready",
         description: "Displays a message on your screen when the watcher has spawned all the mobs",
@@ -92,6 +103,74 @@ class Settings {
     })
     partyFragBot = false;
 
+    // ! Chat
+
+    @SwitchProperty({
+        name: "Anti GEXP",
+        description: "Hides the gexp messages when playing skyblock",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatAntiGexp = false;
+
+    @SwitchProperty({
+        name: "Anti MVP+/++ Join Messages",
+        description: "Hides the MVP+/++ lobby join messages from showing up in your chat",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatAntiMVPPlusPlus = false;
+
+    @SwitchProperty({
+        name: "Anti Hype Messages",
+        description: "Hides the max hype messages from showing up in your chat",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatAntiHypeLimit = false;
+
+    @SwitchProperty({
+        name: "Anti Combo",
+        description: "A settings that makes it so u cant be comboed and it will auto combo for u (hides the combo messages from the grandma wolf)",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatAntiCombo = false;
+
+    @SliderProperty({
+        name: "Anti Non",
+        description: "Hidding messages from a player under a set skyblock level (needs skyblock levels in chat on)",
+        category: "Chat",
+        subcategory: "General",
+        min: 0,
+        max: 398
+    })
+    chatAntiNon = 20;
+
+    @SliderProperty({
+        name: "Anti Non (People without a rank)",
+        description: "Hidding messages from players that dont have a rank",
+        category: "Chat",
+        subcategory: "General"
+    })
+    chatAntiNonRank = false;
+
+    @SwitchProperty({
+        name: "Anti SBE",
+        description: "Hidding any message containing [SBE] in it",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatAntiSBE = false;
+
+    @SwitchProperty({
+        name: "Coop Chat Ping",
+        description: "Plays the ding sound when someone types in coop chat",
+        category: "Chat",
+        subcategory: "General",
+    })
+    chatCoopPing = false;
+
     // ! Misc
 
     @SwitchProperty({
@@ -117,72 +196,6 @@ class Settings {
         subcategory: "General",
     })
     miscCyberBully = false;
-
-    @SwitchProperty({
-        name: "Anti GEXP",
-        description: "Hides the gexp messages when playing skyblock",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscAntiGexp = false;
-
-    @SwitchProperty({
-        name: "Anti MVP+/++ Join Messages",
-        description: "Hides the MVP+/++ lobby join messages from showing up in your chat",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscAntiMVPPlusPlus = false;
-
-    @SwitchProperty({
-        name: "Anti Hype Messages",
-        description: "Hides the max hype messages from showing up in your chat",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscAntiHypeLimit = false;
-
-    @SwitchProperty({
-        name: "Anti Combo",
-        description: "A settings that makes it so u cant be comboed and it will auto combo for u (hides the combo messages from the grandma wolf)",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscAntiCombo = false;
-
-    @SliderProperty({
-        name: "Anti Non",
-        description: "Hidding messages from a player under a set skyblock level (needs skyblock levels in chat on)",
-        category: "Misc",
-        subcategory: "General",
-        min: 0,
-        max: 398
-    })
-    miscAntiNon = 20;
-
-    @SliderProperty({
-        name: "Anti Non (People without a rank)",
-        description: "Hidding messages from players that dont have a rank",
-        category: "Misc",
-        subcategory: "General"
-    })
-    miscAntiNonRank = false;
-
-    @SwitchProperty({
-        name: "Anti SBE",
-        description: "Hidding any message containing [SBE] in it",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscAntiSBE = false;
-
-    @SwitchProperty({
-        name: "Anti Tip",
-        description: "Sick of the auto tip messages? Just hide them",
-        category: "Misc",
-        subcategory: "General",
-    })
-    miscAntiTip = false;
 
     @ButtonProperty({
         name: "&6&lVersion",
