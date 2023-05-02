@@ -3,7 +3,7 @@ import renderBeaconBeam from "../BeaconBeam";
 import RenderLib from "../RenderLib";
 import Settings from "./settings";
 const config = Settings
-const Waypoints = [[7, 87, 85], [41, 79, 81], [76, 76, 55], [91, 76, 38], [78, 77, 40], [82, 78, 26], [61, 78, 92], [94, 77, 42], [63, 76, 95], [103, 74, 98], [50, 80, 88], [35, 80, 71], [45, 79, 70], [79, 80, 73], [50, 76, 52], [95, 76, 58], [98, 78, 75], [55, 79, 34], [64, 78, 28], [58, 79, 89], [90, 77, 46], [60, 76, 51], [45, 79, 49], [89, 77, 84], [92, 74, 108], [75, 82, 20], [47, 77, 65], [97, 80, 77], [42, 77, 58], [51, 76, 52], [55, 80, 38], [63, 76, 52], [52, 75, 45], [73, 79, 52], [66, 81, 28], [78, 74, 99], [104, 78, 68], [39, 80, 73], [43, 79, 73], [36, 80, 80], [95, 76, 59], [97, 75, 70], [97, 81, 77], [46, 80, 84], [32, 80, 74], [43, 77, 50], [50, 79, 34], [90, 77, 38], [98, 77, 76], [73, 76, 31], [91, 77, 27]];
+const Waypoints = [[-24, 76, 97], [-1, 79, 113], [-13, 78, 105], [-1, 76, 81], [27, 76, 51], [26, 86, 43], [-15, 76, 11], [-18, 93, 20], [-17, 87, 49], [-18, 79, 33], [10, 76, 70], [17, 77, 90], [-22, 77, 56], [-40, 76, 80], [-26, 78, 42], [21, 77, 34], [4, 82, 100], [23, 87, 27], [-25, 76, 69], [19, 86, 71]];
 
 register("command", () => config.openGUI()).setName("kath");
 register("command", () => ChatLib.command('/ac §')).setName("limbo");
@@ -158,6 +158,8 @@ register("chat", () => {
 
 register("renderWorld", () => {
   if (!config.miscGiftWaypoints) return;
+  let scoreboardInfoData = (Scoreboard.getLines()).join()
+  if (!scoreboardInfoData.includes("Jerry's Workshop")) return;
   Waypoints.forEach(waypoint => {
     renderBeaconBeam(waypoint[0], waypoint[1], waypoint[2], 0, 153, 153, 1, false)
   });
