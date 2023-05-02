@@ -6,7 +6,7 @@ import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vi
     return categories.indexOf(a.name) - categories.indexOf(b.name);
   },
   getSubcategoryComparator: () => (a, b) => {
-    const subcategories = ["General", "Info", "Other Projects", "Credits"];
+    const subcategories = ["General", "F4/M4", "Info", "Other Projects", "Credits"];
     return subcategories.indexOf(a.getValue()[0].attributesExt.subcategory) -
       subcategories.indexOf(b.getValue()[0].attributesExt.subcategory);
   },
@@ -60,18 +60,18 @@ class Settings {
   dungeonsAutoRestartDelay = 12000;
 
   @SwitchProperty({
-    name: "F4/M4 Spirit Bow ESP",
+    name: "Spirit Bow ESP",
     description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bow",
     category: "Dungeons",
-    subcategory: "General",
+    subcategory: "F4/M4",
   })
   dungeonsSpiritBowESP = false;
 
   @SwitchProperty({
-    name: "F4/M4 Spirit Bear ESP",
+    name: "Spirit Bear ESP",
     description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bear",
     category: "Dungeons",
-    subcategory: "General",
+    subcategory: "F4/M4",
   })
   dungeonsSpiritBearESP = false;
 
@@ -143,7 +143,7 @@ class Settings {
     category: "Chat",
     subcategory: "General",
     min: 0,
-    max: 398
+    max: 400
   })
   chatAntiNon = 20;
 

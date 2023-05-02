@@ -135,9 +135,8 @@ register('chat', (event) => {
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
   if (!config.chatAntiTip) return;
-  if (message.includes("You tipped") || message.includes("You've already tipped someone in the past hour")) {
-    cancel(event)
-  }
+  if (!message.includes("You tipped")) return;
+  cancel(event)
 })
 
 register('chat', (event) => {
