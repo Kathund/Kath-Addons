@@ -54,6 +54,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Added Coop Chat Ping - Plays the ding sound when someone types in coop chat
 - Added `/limbo` - Sneds the user to limbo
 - Added Alert Sound - Plays a sound when an alert gets displayed
+- Added quiz fail message to cyber bully dungeons
 
 ### v1.0.0
 
@@ -79,5 +80,3 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
     - Anti Combo - A settings that makes it so u cant be comboed and it will auto combo for u (hides the combo messages from the grandma wolf)
 
 ## To-Do List
-
-- [ ] Add Statue fail to Cyber Bully Dungeons
