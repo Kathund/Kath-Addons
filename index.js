@@ -22,7 +22,7 @@ register("chat", function (event) {
     const pattern = /(?:\[(\w+)\]\s+)?(\w+)\s+has invited you to join their party!/;
     const match = message.match(pattern);
     if (!match) return;
-    const username = match[2]; // Extract the username
+    const username = match[2];
     ChatLib.command(`p accept ${username}`);
   }
 })
@@ -34,7 +34,7 @@ register("chat", function (event) {
     const pattern = /(?:\[(\w+)\]\s+)?(\w+)\s+has invited you to join their party!/;
     const match = message.match(pattern);
     if (!match) return;
-    const username = match[2]; // Extract the username
+    const username = match[2];
     ChatLib.command(`p accept ${username}`);
     setTimeout(function () {
       ChatLib.command(`p leave`);
@@ -86,7 +86,7 @@ register('chat', (event) => {
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
   if (!config.dungeonsCyberBully) return;
-  if (message.startsWith("PUZZLE FAIL!") && message.includes("Yikes!")) {
+  if (message.startsWith("PUZZLE FAIL!") && message.includes("Yikes!") || messaged.includes("[STATUE] Oruo the Omniscient") && message.includes("chose the wrong answer!")) {
     ChatLib.command(`pc ${message}`);
     ChatLib.command(`ac ${message}`);
   }
@@ -135,7 +135,7 @@ register('chat', (event) => {
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
   if (!config.chatAntiTip) return;
-  if (!message.includes("You tipped")) return;
+  if (!message.includes("tipped")) return;
   cancel(event)
 })
 
