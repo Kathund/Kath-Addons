@@ -39,9 +39,13 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 `< >` = Required arguments, `[ ]` = Optional arguments
 
 - `/kath` - Open the GUI
-- `/limbo` - Sends the user to limbo 
+- `/limbo` - Sends the user to limbo
 
 ## Change Log
+
+## v1.1.0
+
+- Fixed `/limbo` not sending the user to limbo
 
 ## v1.1.0
 
