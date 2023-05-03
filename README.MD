@@ -43,7 +43,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 
 ## Change Log
 
-## v1.1.0
+## v1.1.1
 
 - Fixed `/limbo` not sending the user to limbo
 
