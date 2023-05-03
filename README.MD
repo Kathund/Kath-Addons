@@ -43,6 +43,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 
 ## Change Log
 
+## v1.1.2
+
+- Fixed Anti Tip not working
+
 ## v1.1.1
 
 - Fixed `/limbo` not sending the user to limbo

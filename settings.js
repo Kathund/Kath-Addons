@@ -171,6 +171,14 @@ class Settings {
   })
   chatCyberBully = false;
 
+  @SwitchProperty({
+    name: "Anti Tip",
+    description: "Hides auto tip msgs",
+    category: "Chat",
+    subcategory: "General",
+  })
+  chatAntiTip = false;
+
   // ! Misc
 
   @SwitchProperty({
