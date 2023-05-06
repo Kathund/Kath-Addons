@@ -30,6 +30,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
   - Anti SBE - Hidding any message containing \[SBE\] in it
   - Anti Tip - Sick of the auto tip messages? Just hide them
   - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
+  - Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the jerrys workshop event
@@ -42,6 +43,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - `/limbo` - Sends the user to limbo
 
 ## Change Log
+
+## v1.2.0
+
+- Added Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 
 ## v1.1.2
 

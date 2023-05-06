@@ -179,6 +179,14 @@ class Settings {
   })
   chatAntiTip = false;
 
+  @SwitchProperty({
+    name: "Wiki Swapper",
+    description: "Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis",
+    category: "Chat",
+    subcategory: "General",
+  })
+  chatWikiSwapper = false;
+
   // ! Misc
 
   @SwitchProperty({
