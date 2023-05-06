@@ -225,7 +225,7 @@ class Settings {
     placeholder: "import"
   })
   otherProjectsAutoWelcomeBack() {
-    ChatLib.command(`ct improt AutoWelcomeBack`);
+    ChatLib.command(`ct import AutoWelcomeBack`);
   };
 
   constructor() {
