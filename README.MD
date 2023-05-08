@@ -47,6 +47,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 ## v1.2.0
 
 - Added Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
+- Removed Auto Dungeon Restart due to ban chances
 
 ## v1.1.2
 
