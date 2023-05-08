@@ -12,34 +12,6 @@ register("chat", function (event) {
   }
 })
 
-ShowFirstLoginMessage = () => {
-  helperFunction.data.firstTimeMsg = true;
-  helperFunction.data.save();
-
-  let stringArray = [
-    `${helperFunction.divider}`,
-    ChatLib.getCenteredText(`&dKath Addons`) + "\n",
-    ChatLib.getCenteredText(`&8Looks like this is your first using &dKaths Addons&8!`) + "\n",
-    ChatLib.getCenteredText(`&8GUI command is &e/kath`) + "\n",
-    ChatLib.getCenteredText(`&8Other commands`),
-    ChatLib.getCenteredText(`&8/limbo - Sends to Limbo`),
-    `\n${helperFunction.divider}`
-  ]
-
-  let finalText = ""
-  stringArray.forEach((line) => {
-    if (line == "-/*") return
-    finalText += (!line.includes("-/-")) ? `\n${line}` : line.replace("-/-", "\n")
-  })
-
-  ChatLib.chat(finalText)
-}
-
-register("worldLoad", () => {
-  if (helperFunction.data.firstTimeMsg === true) return
-  ShowFirstLoginMessage()
-})
-
 // ! Dungeons
 
 import './feture/dungeons/bloodReady.js'
@@ -72,3 +44,7 @@ import './feture/chat/wikiSwapper.js';
 
 import './feture/misc/arrowWarning.js';
 import './feture/misc/giftWaypoints.js';
+
+// ! Other
+
+import './feture/firstInstall.js';
