@@ -13,7 +13,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Dungeons
   - Blood Ready - Displays a message on your screen when the watcher has spawned all the mobs
   - Cyber Bully Dungeons - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples fails messages in all and party chat
-  - F4/M4 Spirit Bow ESP - **Usage of this may resualt in a ban! Use at your own risk** - Shows a box arround the spirit bow
+  - F4/M4 Spirit Bow Waypoint - Shows a waypoint from where the spirit bow drops
 - Gardens
   - Visitor Alert - Shows a warning on your screen when a visitor joins your garden
 - Party
@@ -47,6 +47,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Added Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 - Removed Auto Dungeon Restart due to ban chances
 - Removed Spirit Bear ESP due to ban chances
+- Changed Spirit Bow ESP to a wapoint 
 
 ## v1.1.2
 

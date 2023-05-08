@@ -1,6 +1,5 @@
 import * as helperFunction from "./helperFunctions.js";
 import renderBeaconBeam from "../BeaconBeam";
-import RenderLib from "../RenderLib";
 import Settings from "./settings";
 const config = Settings
 const Waypoints = [[-24, 76, 97], [-1, 79, 113], [-13, 78, 105], [-1, 76, 81], [27, 76, 51], [26, 86, 43], [-15, 76, 11], [-18, 93, 20], [-17, 87, 49], [-18, 79, 33], [10, 76, 70], [17, 77, 90], [-22, 77, 56], [-40, 76, 80], [-26, 78, 42], [21, 77, 34], [4, 82, 100], [23, 87, 27], [-25, 76, 69], [19, 86, 71]];
@@ -178,7 +177,7 @@ register("renderWorld", () => {
   let scoreboardInfoData = (Scoreboard.getLines()).join()
   if (!scoreboardInfoData.includes("Jerry's Workshop")) return;
   Waypoints.forEach(waypoint => {
-    renderBeaconBeam(waypoint[0], waypoint[1], waypoint[2], 0, 153, 153, 1, false)
+    renderBeaconBeam(waypoint[0], waypoint[1], waypoint[2], 0, 153, 153, 1, true)
   });
 })
 
@@ -186,13 +185,13 @@ let bows = [];
 
 register("renderWorld", () => {
   bows.forEach(bow => {
-    if (config.dungeonsSpiritBowESP && bow.getName().includes("Spirit Bow")) {
-      RenderLib.drawEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), 1, 1.5, 0, 255, 187, 1, true)
+    if (config.dungeonsSpiritBowWaypoint && bow.getName().includes("Spirit Bow")) {
+      renderBeaconBeam(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), 0, 153, 153, 1, true)
     }
   })
 })
 
 register("step", () => {
-  if (!config.dungeonsSpiritBearESP) return;
+  if (!config.dungeonsSpiritBowWaypoint) return;
   new Thread(() => bows = World.getAllEntities().filter(e => e.getName().includes("Spirit"))).start();
 }).setFps(2)

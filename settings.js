@@ -6,7 +6,7 @@ import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vi
     return categories.indexOf(a.name) - categories.indexOf(b.name);
   },
   getSubcategoryComparator: () => (a, b) => {
-    const subcategories = ["General", "F4/M4", "Info", "Other Projects", "Credits"];
+    const subcategories = ["General", "Info", "Other Projects", "Credits"];
     return subcategories.indexOf(a.getValue()[0].attributesExt.subcategory) -
       subcategories.indexOf(b.getValue()[0].attributesExt.subcategory);
   },
@@ -42,12 +42,12 @@ class Settings {
   dungeonsCyberBully = false;
 
   @SwitchProperty({
-    name: "Spirit Bow ESP",
-    description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bow",
+    name: "Spirit Bow Waypoint",
+    description: "Shows a waypoint from where the spirit bow drops",
     category: "Dungeons",
-    subcategory: "F4/M4",
+    subcategory: "General",
   })
-  dungeonsSpiritBowESP = false;
+  dungeonsSpiritBowWaypoint = false;
 
   // ! Gardens
 
