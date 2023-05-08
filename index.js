@@ -1,3 +1,4 @@
+import * as helperFunction from "./helperFunctions.js";
 import Settings from "./settings";
 const config = Settings
 
@@ -9,6 +10,34 @@ register("chat", function (event) {
   if (message.includes('Illegal characters in chat')) {
     cancel(event)
   }
+})
+
+ShowFirstLoginMessage = () => {
+  helperFunction.data.firstTimeMsg = true;
+  helperFunction.data.save();
+
+  let stringArray = [
+    `${helperFunction.divider}`,
+    ChatLib.getCenteredText(`&dKath Addons`) + "\n",
+    ChatLib.getCenteredText(`&8Looks like this is your first using &dKaths Addons&8!`) + "\n",
+    ChatLib.getCenteredText(`&8GUI command is &e/kath`) + "\n",
+    ChatLib.getCenteredText(`&8Other commands`),
+    ChatLib.getCenteredText(`&8/limbo - Sends to Limbo`),
+    `\n${helperFunction.divider}`
+  ]
+
+  let finalText = ""
+  stringArray.forEach((line) => {
+    if (line == "-/*") return
+    finalText += (!line.includes("-/-")) ? `\n${line}` : line.replace("-/-", "\n")
+  })
+
+  ChatLib.chat(finalText)
+}
+
+register("worldLoad", () => {
+  if (helperFunction.data.firstTimeMsg === true) return
+  ShowFirstLoginMessage()
 })
 
 // ! Dungeons

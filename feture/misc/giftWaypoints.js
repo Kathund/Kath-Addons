@@ -1,5 +1,5 @@
 const Waypoints = [[-24, 76, 97], [-1, 79, 113], [-13, 78, 105], [-1, 76, 81], [27, 76, 51], [26, 86, 43], [-15, 76, 11], [-18, 93, 20], [-17, 87, 49], [-18, 79, 33], [10, 76, 70], [17, 77, 90], [-22, 77, 56], [-40, 76, 80], [-26, 78, 42], [21, 77, 34], [4, 82, 100], [23, 87, 27], [-25, 76, 69], [19, 86, 71]];
-import renderBeaconBeam from "../BeaconBeam";
+import renderBeaconBeam from "../../../BeaconBeam";
 import Settings from "../../settings";
 const config = Settings
 
