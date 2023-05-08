@@ -188,13 +188,11 @@ register("renderWorld", () => {
   bows.forEach(bow => {
     if (config.dungeonsSpiritBowESP && bow.getName().includes("Spirit Bow")) {
       RenderLib.drawEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), 1, 1.5, 0, 255, 187, 1, true)
-    } else if (config.spiritBearEsp && bow.getName().includes("Spirit Bear")) {
-      RenderLib.drawEspBox(bow.getRenderX(), bow.getRenderY(), bow.getRenderZ(), 1, 1.5, 0, 255, 187, 1, true)
     }
   })
 })
 
 register("step", () => {
-  if (!config.dungeonsSpiritBearESP && !config.dungeonsSpiritBowESP) return;
+  if (!config.dungeonsSpiritBearESP) return;
   new Thread(() => bows = World.getAllEntities().filter(e => e.getName().includes("Spirit"))).start();
 }).setFps(2)

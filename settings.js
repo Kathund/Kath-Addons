@@ -42,38 +42,12 @@ class Settings {
   dungeonsCyberBully = false;
 
   @SwitchProperty({
-    name: "Auto Dungeon Restart",
-    description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rAutomatically restarts the dungeon after the dungeon ends",
-    category: "Dungeons",
-    subcategory: "General",
-  })
-  dungeonsAutoRestart = false;
-
-  @SliderProperty({
-    name: "Auto Dungeon delay",
-    description: "Change how long the delay is (in milliseconds - 1000ms = 1 second)",
-    category: "Dungeons",
-    subcategory: "General",
-    min: 1000,
-    max: 30000
-  })
-  dungeonsAutoRestartDelay = 12000;
-
-  @SwitchProperty({
     name: "Spirit Bow ESP",
     description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bow",
     category: "Dungeons",
     subcategory: "F4/M4",
   })
   dungeonsSpiritBowESP = false;
-
-  @SwitchProperty({
-    name: "Spirit Bear ESP",
-    description: "&n&4Usage of this may resualt in a ban! Use at your own risk\n&rShows a box arround the spirit bear",
-    category: "Dungeons",
-    subcategory: "F4/M4",
-  })
-  dungeonsSpiritBearESP = false;
 
   // ! Gardens
 
