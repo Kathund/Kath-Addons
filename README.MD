@@ -45,7 +45,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 
 ## v1.2.0
 
-- Added Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
+- Added Wiki Swapper - **Wiki Swapper May not always work due to the fandom having different page urls then hypixel wiki sometimes** - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 - Removed Auto Dungeon Restart due to ban chances
 - Removed Spirit Bear ESP due to ban chances
 - Changed Spirit Bow ESP to a wapoint
