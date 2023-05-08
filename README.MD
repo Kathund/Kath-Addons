@@ -29,7 +29,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
   - Anti Tip - Sick of the auto tip messages? Just hide them
   - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
   - Coop Chat Ping - Plays the ding sound when someone types in coop chat
-  - Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
+  - Wiki Swapper - **Wiki Swapper May not always work due to the fandom having different page urls then hypixel wiki sometimes** - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the jerrys workshop event

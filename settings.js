@@ -155,7 +155,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Wiki Swapper",
-    description: "Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis",
+    description: "&n&4Wiki Swapper May not always work due to the fandom having different page urls then hypixel wiki sometimes\n&rSwaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis",
     category: "Chat",
     subcategory: "General",
   })
