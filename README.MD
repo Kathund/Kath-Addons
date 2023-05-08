@@ -28,6 +28,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
   - Anti SBE - Hidding any message containing \[SBE\] in it
   - Anti Tip - Sick of the auto tip messages? Just hide them
   - Cyber Bully - **Usage of this may resualt in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
+  - Coop Chat Ping - Plays the ding sound when someone types in coop chat
   - Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
@@ -47,7 +48,8 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Added Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
 - Removed Auto Dungeon Restart due to ban chances
 - Removed Spirit Bear ESP due to ban chances
-- Changed Spirit Bow ESP to a wapoint 
+- Changed Spirit Bow ESP to a wapoint
+- Moved everything into its own file for better backend
 
 ## v1.1.2
 
