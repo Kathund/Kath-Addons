@@ -23,6 +23,14 @@ class Settings {
   })
   generalAlertSound = false;
 
+  @SwitchProperty({
+    name: "Show Change log",
+    description: "Shows a message in chat with the change log when the module updates",
+    category: "General",
+    subcategory: "i dont know",
+  })
+  generalShowChangeLog = true;
+
   // ! Dungeons
 
   @SwitchProperty({

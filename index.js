@@ -48,3 +48,4 @@ import './feture/misc/giftWaypoints.js';
 // ! Other
 
 import './feture/firstInstall.js';
+import './feture/changeLog.js';
