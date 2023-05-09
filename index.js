@@ -7,6 +7,9 @@ const Waypoints = [[-24, 76, 97], [-1, 79, 113], [-13, 78, 105], [-1, 76, 81], [
 
 register("command", () => config.openGUI()).setName("kath");
 register("command", () => ChatLib.say('§')).setName("limbo");
+register("renderWorld", () => {
+  helperFunction.showChangeMessage();
+})
 
 register("chat", function (event) {
   const message = (ChatLib.getChatMessage(event)).toString()
