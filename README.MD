@@ -51,6 +51,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Changed Spirit Bow ESP to a waypoint
 - Moved everything into its own file for better backend
 - Added New first install message
+- Added Change log for when the module updates
 
 ## v1.1.2
 

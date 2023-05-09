@@ -1,3 +1,4 @@
+import * as helperFunctions from "./helperFunctions.js";
 let currentVersion = JSON.parse(FileLib.read("kathAddons", "metadata.json")).version
 import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
 @Vigilant('KathAddons', 'Kath Addons', {
@@ -6,9 +7,9 @@ import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vi
     return categories.indexOf(a.name) - categories.indexOf(b.name);
   },
   getSubcategoryComparator: () => (a, b) => {
-    const subcategories = ["General", "Info", "Other Projects", "Credits"];
-    return subcategories.indexOf(a.getValue()[0].attributesExt.subcategory) -
-      subcategories.indexOf(b.getValue()[0].attributesExt.subcategory);
+    const subcategorys = ["General", "Info", "Other Projects", "Credits", "Change Log"];
+    return subcategorys.indexOf(a.getValue()[0].attributesExt.subcategory) -
+      subcategorys.indexOf(b.getValue()[0].attributesExt.subcategory);
   },
 })
 
@@ -22,6 +23,14 @@ class Settings {
     subcategory: "i dont know",
   })
   generalAlertSound = false;
+
+  @SwitchProperty({
+    name: "Show Change log",
+    description: "Shows a message in chat with the change log when the module updates",
+    category: "General",
+    subcategory: "i dont know",
+  })
+  generalShowChangeLog = true;
 
   // ! Dungeons
 
@@ -208,6 +217,52 @@ class Settings {
   })
   otherProjectsAutoWelcomeBack() {
     ChatLib.command(`ct import AutoWelcomeBack`);
+  };
+
+  // ? Change Logs
+
+  @ButtonProperty({
+    name: "v1.2.0",
+    description: "View the change log for v1.2.0",
+    captureEvents: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_2_0() {
+    helperFunctions.viewChangeLog1_2_0();
+  };
+
+  @ButtonProperty({
+    name: "v1.1.2",
+    description: "View the change log for v1.1.2",
+    captureEvents: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_2_0() {
+    helperFunctions.viewChangeLog1_1_2();
+  };
+
+  @ButtonProperty({
+    name: "v1.1.1",
+    description: "View the change log for v1.1.1",
+    captureEvents: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_2_0() {
+    helperFunctions.viewChangeLog1_1_1();
+  };
+
+  @ButtonProperty({
+    name: "v1.1.0",
+    description: "View the change log for v1.1.0",
+    captureEvents: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_2_0() {
+    helperFunctions.viewChangeLog1_1_0();
   };
 
   constructor() {
