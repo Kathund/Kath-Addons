@@ -224,7 +224,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.2.0",
     description: "View the change log for v1.2.0",
-    captureEvents: "Extra Info",
+    category: "Extra Info",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -235,34 +235,45 @@ class Settings {
   @ButtonProperty({
     name: "v1.1.2",
     description: "View the change log for v1.1.2",
-    captureEvents: "Extra Info",
+    category: "Extra Info",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
-  changeLog1_2_0() {
+  changeLog1_1_2() {
     helperFunctions.viewChangeLog1_1_2();
   };
 
   @ButtonProperty({
     name: "v1.1.1",
     description: "View the change log for v1.1.1",
-    captureEvents: "Extra Info",
+    category: "Extra Info",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
-  changeLog1_2_0() {
+  changeLog1_1_1() {
     helperFunctions.viewChangeLog1_1_1();
   };
 
   @ButtonProperty({
     name: "v1.1.0",
     description: "View the change log for v1.1.0",
-    captureEvents: "Extra Info",
+    category: "Extra Info",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
-  changeLog1_2_0() {
+  changeLog1_1_0() {
     helperFunctions.viewChangeLog1_1_0();
+  };
+
+  @ButtonProperty({
+    name: "v1.0.0",
+    description: "View the change log for v1.0.0",
+    category: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_1_0() {
+    helperFunctions.viewChangeLog1_0_0();
   };
 
   constructor() {
