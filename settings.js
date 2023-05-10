@@ -1,4 +1,4 @@
-let currentVersion = JSON.parse(FileLib.read("kathAddons", "metadata.json")).version
+let currentVersion = JSON.parse(FileLib.read("KATH", "metadata.json")).version
 import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
 @Vigilant('KathAddons', 'Kath Addons', {
   getCategoryComparator: () => (a, b) => {
