@@ -23,8 +23,17 @@ export const ShowFirstLoginMessage = () => {
     ChatLib.getCenteredText(`&8GUI command is &e/kath`) + "\n",
     ChatLib.getCenteredText(`&8Other commands`),
     ChatLib.getCenteredText(`&8/limbo - Sends to Limbo`),
-=======
-export const divider = "&a&m            &d&m            &e&m            &a&m            &d&m            &e&m            &a&m           &d&m           &e&m           &8\n";
+    `\n${divider}`
+  ]
+
+  let finalText = ""
+  stringArray.forEach((line) => {
+    if (line == "-/*") return
+    finalText += (!line.includes("-/-")) ? `\n${line}` : line.replace("-/-", "\n")
+  })
+
+  ChatLib.chat(finalText)
+}
 
 export const viewChangeLog1_2_0 = () => {
   const wikiSwapper = new Message(
