@@ -6,7 +6,7 @@
 
 A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures read the features list for more info.
 
-## Feture List
+## Feature List
 
 - General
   - Alert Sound - Plays a sound when an alert gets displayed
