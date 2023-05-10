@@ -7,7 +7,7 @@ export const removeColors = function (text) {
 
 export const divider = "&a&m            &d&m            &e&m            &a&m            &d&m            &e&m            &a&m           &d&m           &e&m           &8\n";
 
-export const data = new PogObject("KathAddons", {
+export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_2_0": false
 }, "data/data.json")
@@ -18,7 +18,7 @@ export const ShowFirstLoginMessage = () => {
 
   let stringArray = [
     `${divider}`,
-    ChatLib.getCenteredText(`&dKath Addons`) + "\n",
+    ChatLib.getCenteredText(`&dKath Addons -${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
     ChatLib.getCenteredText(`&8Looks like this is your first using &dKaths Addons&8!`) + "\n",
     ChatLib.getCenteredText(`&8GUI command is &e/kath`) + "\n",
     ChatLib.getCenteredText(`&8Other commands`),
