@@ -43,6 +43,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 
 ## Change Log
 
+## v1.1.3 - KINDA
+
+- Added a message that this module is getting renammed and people would need to delete the old on and import the new one
+
 ## v1.1.2
 
 - Fixed Anti Tip not working
