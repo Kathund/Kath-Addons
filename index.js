@@ -14,38 +14,38 @@ register("chat", function (event) {
 
 // ! Dungeons
 
-import './feture/dungeons/bloodReady.js'
-import './feture/dungeons/cyberBullyDungeons.js'
-import './feture/dungeons/spiritBow.js';
+import './feature/dungeons/bloodReady.js'
+import './feature/dungeons/cyberBullyDungeons.js'
+import './feature/dungeons/spiritBow.js';
 
 // ! Gardens
 
-import './feture/gardens/visitorAlert.js';
+import './feature/gardens/visitorAlert.js';
 
 // ! Party
 
-import './feture/party/autoPartyAccept.js';
-import './feture/party/fragBot.js';
+import './feature/party/autoPartyAccept.js';
+import './feature/party/fragBot.js';
 
 // ! Chat
 
-import './feture/chat/antiCombo.js';
-import './feture/chat/antiGexp.js';
-import './feture/chat/antiHype.js';
-import './feture/chat/antiMVPJoin.js';
-import './feture/chat/antiNon.js';
-import './feture/chat/antiSBE.js';
-import './feture/chat/antiTip.js';
-import './feture/chat/coopChatPing.js';
-import './feture/chat/cyberBully.js';
-import './feture/chat/wikiSwapper.js';
+import './feature/chat/antiCombo.js';
+import './feature/chat/antiGexp.js';
+import './feature/chat/antiHype.js';
+import './feature/chat/antiMVPJoin.js';
+import './feature/chat/antiNon.js';
+import './feature/chat/antiSBE.js';
+import './feature/chat/antiTip.js';
+import './feature/chat/coopChatPing.js';
+import './feature/chat/cyberBully.js';
+import './feature/chat/wikiSwapper.js';
 
 // ! Misc
 
-import './feture/misc/arrowWarning.js';
-import './feture/misc/giftWaypoints.js';
+import './feature/misc/arrowWarning.js';
+import './feature/misc/giftWaypoints.js';
 
 // ! Other
 
-import './feture/firstInstall.js';
-import './feture/changeLog.js';
+import './feature/firstInstall.js';
+import './feature/changeLog.js';
