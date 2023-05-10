@@ -1,6 +1,6 @@
 # Kath - Kathund#2004
 
-[Chattrigger Module](https://www.chattriggers.com/modules/v/kath)
+[Chattrigger Module](https://www.chattriggers.com/modules/v/Kath)
 
 ## Description
 
@@ -52,6 +52,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL fetures 
 - Moved everything into its own file for better backend
 - Added New first install message
 - Added Change log for when the module updates
+
+## v1.1.3 - KINDA
+
+- Added a message that this module is getting renammed and people would need to delete the old on and import the new one
 
 ## v1.1.2
 

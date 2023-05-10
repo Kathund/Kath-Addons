@@ -4,6 +4,9 @@ const config = Settings
 
 register("command", () => config.openGUI()).setName("kath");
 register("command", () => ChatLib.say('§')).setName("limbo");
+register("renderWorld", () => {
+  helperFunction.showChangeMessage();
+})
 
 register("chat", function (event) {
   const message = (ChatLib.getChatMessage(event)).toString()
