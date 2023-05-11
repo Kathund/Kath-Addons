@@ -1,7 +1,7 @@
 import * as helperFunctions from "./helperFunctions.js";
 let currentVersion = JSON.parse(FileLib.read("kath", "metadata.json")).version
 import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
-@Vigilant('kath', 'Kath Addons', {
+@Vigilant('kath', 'Kath', {
   getCategoryComparator: () => (a, b) => {
     const categories = ['General', 'Dungeons', 'Gardens', 'Party', 'Chat', 'Misc', 'Extra Info'];
     return categories.indexOf(a.name) - categories.indexOf(b.name);
