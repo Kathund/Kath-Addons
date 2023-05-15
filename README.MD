@@ -47,6 +47,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 ## v1.3.0
 - Changed spelling in most files
 - Added Discord warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
+- Better optimized code
 
 ## v1.2.0
 
