@@ -8,7 +8,7 @@ register('chat', (event) => {
     if (!config.gardenVisitorAlert) return;
     const words = message.split(' ');
     const name = words.slice(0, words.indexOf('has')).join(' ');
-    Client.showTitle(`&b&l${name} &r&fhas arrived on your Garden!`, "", 1, 30, 1);
+    Client.showTitle(`&b&l${name}&r&f has arrived on your Garden!`, "", 1, 30, 1);
     if (!config.generalAlertSound) return;
     World.playSound("random.orb", 2, 1);
   }
