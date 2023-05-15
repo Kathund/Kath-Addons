@@ -45,6 +45,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 
 ## v1.3.0
 - Checked spelling in most files
+- Added Discord warning
 
 ## v1.2.0
 
