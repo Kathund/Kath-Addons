@@ -9,7 +9,7 @@ export const divider = "&a&m            &d&m            &e&m            &a&m    
 
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
-  "updateMessage1_2_0": false,
+  "updateMessage1_3_0": false,
   "discordWarningMessage": true
 }, "data/data.json")
 
@@ -34,6 +34,21 @@ export const ShowFirstLoginMessage = () => {
   })
 
   ChatLib.chat(finalText)
+}
+
+export const viewChangeLog1_3_0 = () => {
+  const discordWarning = new Message(
+    new TextComponent("&7Discord Warning &8(hover)").setHover("show_text", `Shows a warning about scams rats and other stuff like that when someone posts a discord invite link`)
+  );
+  const spelling = new Message(
+    new TextComponent("&7Changed spelling in most files")
+  );
+
+  ChatLib.chat(divider)
+  ChatLib.chat(`&dKath - &ev1.3.0`)
+  ChatLib.chat(discordWarning)
+  ChatLib.chat(spelling)
+  ChatLib.chat(divider)
 }
 
 export const viewChangeLog1_2_0 = () => {

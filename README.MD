@@ -10,6 +10,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 
 - General
   - Alert Sound - Plays a sound when an alert gets displayed
+  - Discord Warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
 - Dungeons
   - Blood Ready - Displays a message on your screen when the watcher has spawned all the mobs
   - Cyber Bully Dungeons - **Usage of this may result in a mute! Use at your own risk** - Will post peoples fails messages in all and party chat
@@ -44,8 +45,8 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 ## Change Log
 
 ## v1.3.0
-- Checked spelling in most files
-- Added Discord warning
+- Changed spelling in most files
+- Added Discord warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
 
 ## v1.2.0
 

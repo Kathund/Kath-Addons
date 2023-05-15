@@ -11,6 +11,9 @@ register("chat", function (event) {
   }
 })
 
+// ! General
+import './feature/general/discordWarning.js'; 
+
 // ! Dungeons
 
 import './feature/dungeons/bloodReady.js'
