@@ -20,7 +20,7 @@ class Settings {
     name: "Alert Sound",
     description: "Plays a sound when an alert gets displayed",
     category: "General",
-    subcategory: "i dont know",
+    subcategory: "Not General",
   })
   generalAlertSound = false;
 
@@ -28,7 +28,7 @@ class Settings {
     name: "Show Change log",
     description: "Shows a message in chat with the change log when the module updates",
     category: "General",
-    subcategory: "i dont know",
+    subcategory: "Not General",
   })
   generalShowChangeLog = true;
 
@@ -44,7 +44,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Cyber Bully Dungeons",
-    description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples fails messages in all and party chat",
+    description: "&n&4Usage of this may result in a mute! Use at your own risk\n&rWill post peoples fails messages in all and party chat",
     category: "Dungeons",
     subcategory: "General",
   })
@@ -148,7 +148,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Cyber Bully",
-    description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
+    description: "&n&4Usage of this may result in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
     category: "Chat",
     subcategory: "General",
   })
@@ -182,7 +182,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Gift Waypoints",
-    description: "Waypoints to all the possible spawn locations for gifts in the jerrys workshop event",
+    description: "Waypoints to all the possible spawn locations for gifts in the jerry's workshop event",
     category: "Misc",
     subcategory: "General",
   })
@@ -210,7 +210,7 @@ class Settings {
 
   @ButtonProperty({
     name: "Auto Welcome Back",
-    description: "A Simple Chat triggers module that alows you to welcome guild members back when they join and is highly customizable",
+    description: "A Simple Chat triggers module that allows you to welcome guild members back when they join and is highly customizable",
     category: "Extra Info",
     subcategory: "Other Projects",
     placeholder: "import"

@@ -43,11 +43,15 @@ export const viewChangeLog1_3_0 = () => {
   const spelling = new Message(
     new TextComponent("&7Changed spelling in most files")
   );
+  const wikiSwapper = new Message(
+    new TextComponent("&7Fixed WikiSwapper so its less likely to fail")
+  );
 
   ChatLib.chat(divider)
   ChatLib.chat(`&dKath - &ev1.3.0`)
   ChatLib.chat(discordWarning)
   ChatLib.chat(spelling)
+  ChatLib.chat(wikiSwapper)
   ChatLib.chat(divider)
 }
 
@@ -213,3 +217,5 @@ export const viewChangeLog1_0_0 = () => {
   ChatLib.chat(antiCombo)
   ChatLib.chat(divider)
 }
+
+export const getWikiUrl = (item) => axios.get(`https://raw.githubusercontent.com/NotEnoughUpdates/NotEnoughUpdates-REPO/master/items/${item.toUpperCase()}.json`).then(a => a.info[0]).catch(e => { console.log(e) })

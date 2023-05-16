@@ -10,10 +10,9 @@ register("chat", (event) => {
     var part = part.getClickValue()
     if (part === null) return;
     if (!part.includes('https://wiki.hypixel.net/')) return;
-    var id = part.split("/").pop();
     cancel(event)
     const newMessage = new Message(
-      new TextComponent("&7Click &e&lHERE &7to find it on the &6Better Wiki&7!&r").setClick("open_url", `https://hypixel-skyblock.fandom.com/wiki/${id}`).setHover("show_text", `https://hypixel-skyblock.fandom.com/wiki/${id}`)
+      new TextComponent("&7Click &e&lHERE &7to find it on the &6Better Wiki&7!&r").setClick("open_url", part.split("/").pop()).setHover("show_text", part.split("/").pop())
     );
     ChatLib.chat(newMessage)
   })
