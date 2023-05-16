@@ -1,7 +1,6 @@
 import renderBeaconBeam from "../../../BeaconBeam";
 import Settings from "../../settings";
 const config = Settings
-
 let bows = [];
 
 register("renderWorld", () => {

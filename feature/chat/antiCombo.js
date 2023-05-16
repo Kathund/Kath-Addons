@@ -5,7 +5,5 @@ const config = Settings
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
   if (!config.chatAntiCombo) return;
-  if (message.includes("Kill Combo")) {
-    cancel(event)
-  }
+  if (message.includes("Kill Combo")) cancel(event)
 })

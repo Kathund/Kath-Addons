@@ -7,6 +7,5 @@ register('chat', (event) => {
   const words = message.split(' ');
   const name = words.slice(0, words.indexOf('has')).join(' ');
   Client.showTitle(`&b&l${name}&r&f has arrived on your Garden!`, "", 1, 30, 1);
-  if (!config.generalAlertSound) return;
-  World.playSound("random.orb", 2, 1);
+  if (config.generalAlertSound) World.playSound("random.orb", 2, 1);
 }).setCriteria(/[A-Za-z]+ has arrived on your Garden/)
