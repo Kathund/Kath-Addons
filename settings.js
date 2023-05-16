@@ -16,6 +16,18 @@ import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vi
 class Settings {
   // ! General
 
+  @ButtonProperty({
+    name: "get banned",
+    description: "click to get banned",
+    category: "General",
+    subcategory: "Not General",
+    placeholder: "ban"
+  })
+  ban() {
+    banned = new ChatComponentText(`§cYou are temporarily banned for §f356d 23h 59m 59s§c from this server!\n\n§7Reason: §rCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n\n§7Ban ID: §r#${helperFunctions.genID()}\n§7Sharing your Ban ID may affect the processing of your appeal!`)
+    mc.func_147114_u().func_147298_b().func_150718_a(banned)
+  }
+
   @SwitchProperty({
     name: "Alert Sound",
     description: "Plays a sound when an alert gets displayed",
