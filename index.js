@@ -39,6 +39,7 @@ import './feature/chat/antiTip.js';
 import './feature/chat/coopChatPing.js';
 import './feature/chat/cyberBully.js';
 import './feature/chat/wikiSwapper.js';
+import './feature/chat/antiMysteryBox.js';
 
 // ! Misc
 

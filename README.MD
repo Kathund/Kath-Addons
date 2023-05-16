@@ -30,7 +30,8 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
   - Anti Tip - Sick of the auto tip messages? Just hide them
   - Cyber Bully - **Usage of this may result in a mute! Use at your own risk** - Will post peoples death messages in all and party chat
   - Coop Chat Ping - Plays the ding sound when someone types in coop chat
-  - Wiki Swapper - **Wiki Swapper May not always work due to the fandom having different page urls then hypixel wiki sometimes** - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
+  - Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
+  - Anti Mystery Box - Hides messages about the stupid mystery box
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the Jerry's workshop event
@@ -45,10 +46,12 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 ## Change Log
 
 ## v1.3.0
+
 - Changed spelling in most files
 - Added Discord warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
 - Better optimized code
 - Fixed WikiSwapper so its less likely to fail
+- Added Anti Mystery Box
 
 ## v1.2.0
 

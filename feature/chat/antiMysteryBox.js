@@ -1,5 +1,5 @@
 import * as helperFunction from "../../helperFunctions.js";
-import Settings from "../../settings";
+import Settings from "../../settings.js";
 const config = Settings
 
 register('chat', (event) => {
