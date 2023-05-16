@@ -46,4 +46,7 @@ import './feature/chat/antiMysteryBox.js';
 import './feature/misc/arrowWarning.js';
 import './feature/misc/giftWaypoints.js';
 
-// ! Other
+// ! QOL
+
+import './feature/hypixelJoinner.js';
+import './feature/skyblockJoinner.js';

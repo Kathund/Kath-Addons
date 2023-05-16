@@ -44,6 +44,22 @@ class Settings {
   })
   generalShowChangeLog = true;
 
+  @SwitchProperty({
+    name: "Hypixel Joinner",
+    description: "Automatically joins hypixel when you open minecraft",
+    category: "General",
+    subcategory: "i dont know",
+  })
+  generalHypixelJoinner = false;
+
+  @SwitchProperty({
+    name: "Skyblock Joinner",
+    description: "Automatically joins skyblock when u join hypixel (needs motd to work)",
+    category: "General",
+    subcategory: "i dont know",
+  })
+  generalSkyblockJoinner = false;
+
   // ! Dungeons
 
   @SwitchProperty({

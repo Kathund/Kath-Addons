@@ -4,5 +4,5 @@
   "description": "A ChatTriggers module that is designed for hypixel skyblock. It has QOL features read the features list for more info.",
   "version": "1.3.0",
   "entry": "index.js",
-  "requires": ["Vigilance", "BeaconBeam", "PogData", "axios"]
+  "requires": ["Vigilance", "BeaconBeam", "PogData", "PromiseV2", "axios"]
 }
