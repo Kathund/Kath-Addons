@@ -32,9 +32,13 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
   - Coop Chat Ping - Plays the ding sound when someone types in coop chat
   - Wiki Swapper - Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis
   - Anti Mystery Box - Hides messages about the stupid mystery box
+- QOL
+  - Server Joiner - Automatically joins a server when you open minecraft
+  - Skyblock Joiner - Automatically joins skyblock when u join hypixel (needs guild motd to work)
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the Jerry's workshop event
+  - Discord link warning - Shows a warning in chat about discord links 
 
 ## Commands
 
@@ -42,6 +46,8 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 
 - `/kath` - Open the GUI
 - `/limbo` - Sends the user to limbo
+- `/discordwarningoff` - Turns off the discord warning
+- `/discordwarningon` - Turns on the discord warning
 
 ## Change Log
 
@@ -52,6 +58,9 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Better optimized code
 - Fixed WikiSwapper so its less likely to fail
 - Added Anti Mystery Box
+- Added QOL server Joiner - Automatically joins a server when you open minecraft
+- Added QOL Skyblock Joiner - Automatically joins skyblock when u join hypixel (needs guild motd to work)
+- Discord link warning - Shows a warning in chat about discord linksh
 
 ## v1.2.0
 

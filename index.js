@@ -1,10 +1,11 @@
 import Settings from "./settings";
 const config = Settings
 
-register("command", () => config.openGUI()).setName("kath");
-register("command", () => ChatLib.say('§')).setName("limbo");
-
 register("chat", (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/)
+
+// ! IMPORTANT
+
+import './feature/registerCommands.js';
 
 // ! General
 
@@ -48,5 +49,5 @@ import './feature/misc/giftWaypoints.js';
 
 // ! QOL
 
-import './feature/hypixelJoinner.js';
-import './feature/skyblockJoinner.js';
+import './feature/qol/serverJoiner.js';
+import './feature/qol/skyblockJoiner.js';

@@ -10,7 +10,7 @@ export const divider = "&a&m            &d&m            &e&m            &a&m    
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_3_0": false,
-  "discordWarningMessage": true
+  "discordWarningMessage": true,
 }, "data/data.json")
 
 export const ShowFirstLoginMessage = () => {
@@ -49,6 +49,12 @@ export const viewChangeLog1_3_0 = () => {
   const antiMysteryBox = new Message(
     new TextComponent("&7Added Anti Mystery Box &8(hover)").setHover("show_text", `Hides messages about the stupid mystery box`)
   );
+  const serverJoiner = new Message(
+    new TextComponent("&7Server Joiner &8(hover)").setHover("show_text", `Automatically joins a server when you open minecraft`)
+  );
+  const skyblockJoiner = new Message(
+    new TextComponent("&7Skyblock Joiner &8(hover)").setHover("show_text", `Automatically joins skyblock when u join hypixel (needs guild motd to work)`)
+  );
 
   ChatLib.chat(divider)
   ChatLib.chat(`&dKath - &ev1.3.0`)
@@ -56,6 +62,8 @@ export const viewChangeLog1_3_0 = () => {
   ChatLib.chat(spelling)
   ChatLib.chat(wikiSwapper)
   ChatLib.chat(antiMysteryBox)
+  ChatLib.chat(serverJoiner)
+  ChatLib.chat(skyblockJoiner)
   ChatLib.chat(divider)
 }
 
