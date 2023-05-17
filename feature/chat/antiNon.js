@@ -9,6 +9,8 @@ register('chat', (event) => {
   var pattern = /\[(\d+)\]/;
   var match = message.match(pattern)
   if (!match) return;
-  if (config.chatAntiNon <= parseInt(match[1])) return;
+  var num = parseInt(match[1]);
+  if (isNaN(num)) return;
+  if (config.chatAntiNon <= num) return;
   cancel(event)
 })

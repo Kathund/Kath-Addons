@@ -4,6 +4,5 @@ const config = Settings
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.chatAntiSBE) return;
-  if (message.includes("[SBE]")) cancel(event)
+  if (config.chatAntiSBE && message.includes("[SBE]")) cancel(event)
 })

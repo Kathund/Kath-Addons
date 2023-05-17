@@ -4,6 +4,5 @@ const config = Settings
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.chatAntiTip) return;
-  if (message.includes("tipped")) cancel(event)
+  if (config.chatAntiTip && message.includes("tipped")) cancel(event)
 })
