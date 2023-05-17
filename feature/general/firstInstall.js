@@ -1,4 +1,4 @@
-import * as helperFunction from "../helperFunctions.js";
+import * as helperFunction from "../../helperFunctions.js";
 
 register("step", () => {
   if (!helperFunction.data.firstTimeMsg) return;

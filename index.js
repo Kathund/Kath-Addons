@@ -1,15 +1,15 @@
-import Settings from "./settings";
-const config = Settings
 
-register("command", () => config.openGUI()).setName("kath");
-register("command", () => ChatLib.say('§')).setName("limbo");
+register("chat", (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/)
 
-register("chat", function (event) {
-  const message = (ChatLib.getChatMessage(event)).toString()
-  if (message.includes('Illegal characters in chat')) {
-    cancel(event)
-  }
-})
+// ! IMPORTANT
+
+import './feature/registerCommands.js';
+
+// ! General
+
+import './feature/general/discordWarning.js';
+import './feature/general/firstInstall.js';
+import './feature/general/changeLog.js';
 
 // ! Dungeons
 
@@ -38,13 +38,14 @@ import './feature/chat/antiTip.js';
 import './feature/chat/coopChatPing.js';
 import './feature/chat/cyberBully.js';
 import './feature/chat/wikiSwapper.js';
+import './feature/chat/antiMysteryBox.js';
 
 // ! Misc
 
 import './feature/misc/arrowWarning.js';
 import './feature/misc/giftWaypoints.js';
 
-// ! Other
+// ! QOL
 
-import './feature/firstInstall.js';
-import './feature/changeLog.js';
+import './feature/qol/serverJoiner.js';
+import './feature/qol/skyblockJoiner.js';

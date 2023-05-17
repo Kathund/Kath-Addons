@@ -1,9 +1,9 @@
 import * as helperFunctions from "./helperFunctions.js";
 let currentVersion = JSON.parse(FileLib.read("kath", "metadata.json")).version
-import { @Vigilant, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
+import { @Vigilant, @TextProperty, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
 @Vigilant('kath', 'Kath', {
   getCategoryComparator: () => (a, b) => {
-    const categories = ['General', 'Dungeons', 'Gardens', 'Party', 'Chat', 'Misc', 'Extra Info'];
+    const categories = ['General', 'Dungeons', 'Gardens', 'Party', 'Chat', 'QOL', 'Misc', 'Extra Info'];
     return categories.indexOf(a.name) - categories.indexOf(b.name);
   },
   getSubcategoryComparator: () => (a, b) => {
@@ -20,7 +20,7 @@ class Settings {
     name: "Alert Sound",
     description: "Plays a sound when an alert gets displayed",
     category: "General",
-    subcategory: "i dont know",
+    subcategory: "Not General",
   })
   generalAlertSound = false;
 
@@ -28,9 +28,9 @@ class Settings {
     name: "Show Change log",
     description: "Shows a message in chat with the change log when the module updates",
     category: "General",
-    subcategory: "i dont know",
+    subcategory: "Not General",
   })
-  generalShowChangeLog = true;
+  generalShowChangeLog = false;
 
   // ! Dungeons
 
@@ -44,7 +44,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Cyber Bully Dungeons",
-    description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples fails messages in all and party chat",
+    description: "&n&4Usage of this may result in a mute! Use at your own risk\n&rWill post peoples fails messages in all and party chat",
     category: "Dungeons",
     subcategory: "General",
   })
@@ -148,7 +148,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Cyber Bully",
-    description: "&n&4Usage of this may resualt in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
+    description: "&n&4Usage of this may result in a mute! Use at your own risk\n&rWill post peoples death messages in all and party chat",
     category: "Chat",
     subcategory: "General",
   })
@@ -164,11 +164,46 @@ class Settings {
 
   @SwitchProperty({
     name: "Wiki Swapper",
-    description: "&n&4Wiki Swapper May not always work due to the fandom having different page urls then hypixel wiki sometimes\n&rSwaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis",
+    description: "Swaps out the hypixel wiki with the fandom wiki when using /wiki or /wikithis",
     category: "Chat",
     subcategory: "General",
   })
   chatWikiSwapper = false;
+
+  @SwitchProperty({
+    name: "Anti Mystery Box",
+    description: "Hides messages about the stupid mystery box",
+    category: "Chat",
+    subcategory: "General",
+  })
+  chatAntiMysteryBox = false;
+
+  // ! QOL
+
+  @SwitchProperty({
+    name: "Server Joiner",
+    description: "Automatically joins a server when you open minecraft",
+    category: "QOL",
+    subcategory: "General",
+  })
+  qolServerJoiner = false;
+
+  @TextProperty({
+    name: 'Server IP',
+    description: 'Server IP to join when opening minecraft',
+    category: 'QOL',
+    subcategory: 'General',
+    placeholder: 'play.hypixel.net',
+  })
+  qolServerIP = 'play.hypixel.net';
+
+  @SwitchProperty({
+    name: "Skyblock Joiner",
+    description: "Automatically joins skyblock when u join hypixel (needs guild motd to work)",
+    category: "QOL",
+    subcategory: "General",
+  })
+  qolSkyblockJoiner = false;
 
   // ! Misc
 
@@ -182,7 +217,7 @@ class Settings {
 
   @SwitchProperty({
     name: "Gift Waypoints",
-    description: "Waypoints to all the possible spawn locations for gifts in the jerrys workshop event",
+    description: "Waypoints to all the possible spawn locations for gifts in the jerry's workshop event",
     category: "Misc",
     subcategory: "General",
   })
@@ -210,7 +245,7 @@ class Settings {
 
   @ButtonProperty({
     name: "Auto Welcome Back",
-    description: "A Simple Chat triggers module that alows you to welcome guild members back when they join and is highly customizable",
+    description: "A Simple Chat triggers module that allows you to welcome guild members back when they join and is highly customizable",
     category: "Extra Info",
     subcategory: "Other Projects",
     placeholder: "import"
@@ -220,6 +255,17 @@ class Settings {
   };
 
   // ? Change Logs
+
+  @ButtonProperty({
+    name: "v1.3.0",
+    description: "View the change log for v1.3.0",
+    category: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_3_0() {
+    helperFunctions.viewChangeLog1_3_0();
+  };
 
   @ButtonProperty({
     name: "v1.2.0",
@@ -272,7 +318,7 @@ class Settings {
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
-  changeLog1_1_0() {
+  changeLog1_0_0() {
     helperFunctions.viewChangeLog1_0_0();
   };
 
