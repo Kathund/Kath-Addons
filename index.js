@@ -1,5 +1,3 @@
-import Settings from "./settings";
-const config = Settings
 
 register("chat", (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/)
 
