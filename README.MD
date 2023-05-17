@@ -38,7 +38,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Misc
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the Jerry's workshop event
-  - Discord link warning - Shows a warning in chat about discord links 
+  - Discord link warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
 
 ## Commands
 
@@ -60,7 +60,6 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added Anti Mystery Box
 - Added QOL server Joiner - Automatically joins a server when you open minecraft
 - Added QOL Skyblock Joiner - Automatically joins skyblock when u join hypixel (needs guild motd to work)
-- Discord link warning - Shows a warning in chat about discord linksh
 
 ## v1.2.0
 
