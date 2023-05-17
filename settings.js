@@ -30,7 +30,7 @@ class Settings {
     category: "General",
     subcategory: "Not General",
   })
-  generalShowChangeLog = true;
+  generalShowChangeLog = false;
 
   // ! Dungeons
 
@@ -263,7 +263,7 @@ class Settings {
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
-  changeLog1_2_0() {
+  changeLog1_3_0() {
     helperFunctions.viewChangeLog1_3_0();
   };
 

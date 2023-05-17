@@ -5,15 +5,25 @@ const config = Settings
 register("chat", (event) => {
   if (!config.chatWikiSwapper) return;
   let ReceivedMessage = new Message(EventLib.getMessage(event));
-  ReceivedMessage.getMessageParts()
   ReceivedMessage.getMessageParts().forEach((part) => {
     var part = part.getClickValue()
     if (part === null) return;
     if (!part.includes('https://wiki.hypixel.net/')) return;
     cancel(event)
-    const newMessage = new Message(
-      new TextComponent("&7Click &e&lHERE &7to find it on the &6Better Wiki&7!&r").setClick("open_url", part.split("/").pop()).setHover("show_text", part.split("/").pop())
-    );
-    ChatLib.chat(newMessage)
+    helperFunction.getWikiUrl(part.split("/").pop()).then(url => {
+      const newMessage = new Message(
+        new TextComponent("&7Click &e&lHERE &7to find it on the &6Better Wiki&7!&r").setClick("open_url", url).setHover("show_text", url));
+      ChatLib.chat(`&r&7Found Item: &r&a${(part.split("/").pop()).replaceAll("_", " ")}&r`)
+      ChatLib.chat(newMessage)
+      ChatLib.chat('')
+    })
   })
+})
+
+register("chat", (event) => {
+  if (!config.chatWikiSwapper) return;
+  var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
+  if (message.includes("Found Item:")) {
+    cancel(event)
+  }
 })

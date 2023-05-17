@@ -1,11 +1,12 @@
 import PogObject from "../PogData/index"
+import axios from "../axios";
 
 export const removeColors = function (text) {
   const cleanText = text.replace(/§./g, "");
   return cleanText;
 }
 
-export const divider = "&a&m            &d&m            &e&m            &a&m            &d&m            &e&m            &a&m           &d&m           &e&m           &8\n";
+export const divider = "&a&m            &d&m            &e&m            &a&m            &d&m            &e&m            &a&m           &d&m           &e&m           &8";
 
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
@@ -230,7 +231,7 @@ export const viewChangeLog1_0_0 = () => {
   ChatLib.chat(divider)
 }
 
-export const getWikiUrl = (item) => axios.get(`https://raw.githubusercontent.com/NotEnoughUpdates/NotEnoughUpdates-REPO/master/items/${item.toUpperCase()}.json`).then(a => a.info[0]).catch(e => { console.log(e) })
+export const getWikiUrl = (item) => axios.get(`https://raw.githubusercontent.com/NotEnoughUpdates/NotEnoughUpdates-REPO/master/items/${item.toUpperCase()}.json`).then(data => data.data.info[0]).catch(e => { console.log(e) })
 
 export const genID = () => {
   var result = '';
