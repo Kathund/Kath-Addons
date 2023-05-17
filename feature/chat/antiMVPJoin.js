@@ -4,5 +4,6 @@ const config = Settings
 
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (config.chatAntiMVPPlusPlus && message.includes("joined the lobby!")) cancel(event)
+  if (!config.chatAntiMVPPlusPlus) return;
+  if (message.includes("joined the lobby!")) cancel(event)
 })

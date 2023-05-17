@@ -4,8 +4,9 @@ import Settings from "../../settings";
 const config = Settings
 
 register("renderWorld", () => {
+  if (!config.miscGiftWaypoints) return;
   let scoreboardInfoData = (Scoreboard.getLines()).join()
-  if (!config.miscGiftWaypoints && !scoreboardInfoData.includes("Jerry's Workshop")) return;
+  if (!scoreboardInfoData.includes("Jerry's Workshop")) return;
   Waypoints.forEach(waypoint => {
     renderBeaconBeam(waypoint[0], waypoint[1], waypoint[2], 0, 153, 153, 1, true)
   });
