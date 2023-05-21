@@ -51,6 +51,12 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 
 ## Change Log
 
+## v1.3.1 - Bug fixes
+
+- Fixed anti mystery box
+- Fixed first install message
+- Fixed Skyblock joiner not working 
+
 ## v1.3.0
 
 - Changed spelling in most files

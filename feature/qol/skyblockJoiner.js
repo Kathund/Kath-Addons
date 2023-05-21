@@ -5,5 +5,5 @@ const config = Settings
 register('chat', (event) => {
   var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
   if (!message.includes("Guild: Message Of The Day")) return;
-  if (config.generalSkyblockJoiner) ChatLib.command("play skyblock")
+  if (config.qolSkyblockJoiner) ChatLib.command("play skyblock")
 })
