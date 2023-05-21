@@ -11,7 +11,7 @@ export const divider = "&a&m            &d&m            &e&m            &a&m    
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_3_0": false,
-  "discordWarningMessage": true,
+  "discordWarningMessage": true
 }, "data/data.json")
 
 export const ShowFirstLoginMessage = () => {
@@ -20,11 +20,11 @@ export const ShowFirstLoginMessage = () => {
 
   let stringArray = [
     `${divider}`,
-    ChatLib.getCenteredText(`&dKath Addons -${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
-    ChatLib.getCenteredText(`&8Looks like this is your first using &dKath8!`) + "\n",
-    ChatLib.getCenteredText(`&8GUI command is &e/kath`) + "\n",
-    ChatLib.getCenteredText(`&8Other commands`),
-    ChatLib.getCenteredText(`&8/limbo - Sends to Limbo`),
+    ChatLib.getCenteredText(`&dKath Addons &7- &e${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
+    ChatLib.getCenteredText(`&7Looks like this is your first using &dKath&7!`) + "\n",
+    ChatLib.getCenteredText(`&7GUI command is &e/kath`) + "\n",
+    ChatLib.getCenteredText(`&7Other commands`),
+    ChatLib.getCenteredText(`&d/limbo &e- &7Sends to Limbo`),
     `\n${divider}`
   ]
 
