@@ -10,7 +10,7 @@ export const divider = "&a&m            &d&m            &e&m            &a&m    
 
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
-  "updateMessage1_3_0": false,
+  "updateMessage1_3_1": false,
   "discordWarningMessage": true
 }, "data/data.json")
 
@@ -35,6 +35,25 @@ export const ShowFirstLoginMessage = () => {
   })
 
   ChatLib.chat(finalText)
+}
+
+export const viewChangeLog1_3_1 = () => {
+  const antiMysteryBox = new Message(
+    new TextComponent("&7Fixed anti mystery box")
+  );
+  const firstInstall = new Message(
+    new TextComponent("&7Fixed first install message")
+  );
+  const skyblockJoiner = new Message(
+    new TextComponent("&7Fixed Skyblock joiner not working")
+  );
+
+  ChatLib.chat(divider)
+  ChatLib.chat(`&dKath - &ev1.3.0`)
+  ChatLib.chat(antiMysteryBox)
+  ChatLib.chat(firstInstall)
+  ChatLib.chat(skyblockJoiner)
+  ChatLib.chat(divider)
 }
 
 export const viewChangeLog1_3_0 = () => {
