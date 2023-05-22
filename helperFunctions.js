@@ -11,7 +11,8 @@ export const divider = "&a&m            &d&m            &e&m            &a&m    
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_3_1": false,
-  "discordWarningMessage": true
+  "discordWarningMessage": true,
+  "ignoreList": []
 }, "data/data.json")
 
 export const ShowFirstLoginMessage = () => {
@@ -267,12 +268,6 @@ export const viewChangeLog1_0_0 = () => {
 
 export const getWikiUrl = (item) => axios.get(`https://raw.githubusercontent.com/NotEnoughUpdates/NotEnoughUpdates-REPO/master/items/${item.toUpperCase()}.json`).then(data => data.data.info[0]).catch(e => { console.log(e) })
 
-export const genID = () => {
-  var result = '';
-  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789012345678901234567890123456789';
-  var charactersLength = characters.length;
-  for (var i = 0; i < 8; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}
+export const getUsername = (uuid) => axios.get(`https://sessionserver.mojang.com/session/minecraft/profile/${uuid}`).then(a => a.data.name).catch(e => { console.log(e) })
+
+export const getUUID = (username) => axios.get(`https://api.mojang.com/users/profiles/minecraft/${username}`).then(a => a.data.id).catch(e => { console.log(e) })

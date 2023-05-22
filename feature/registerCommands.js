@@ -18,6 +18,27 @@ register("command", (...args) => {
   ChatLib.chat(wikiMessage)
 }).setName("wikisearch");
 
+register("command", (...args) => {
+  try {
+    if (!["add", "remove"].includes(args[0].toLowerCase())) throw new Error("Invalid argument (add/remove)");
+    if (args[0].toLowerCase() === "add") {
+      helperFunction.getUUID(args[1]).then((uuid) => {
+        helperFunction.data.ignoreList.push(uuid);
+        helperFunction.data.save();
+        ChatLib.chat(`&2[&dKath&2] &7Added &a${args[1]} &7to the list of client side blocked users`)
+      }).catch((error) => { throw new Error(error) })
+    } else if (args[0].toLowerCase() === "remove") {
+      helperFunction.getUUID(args[1]).then((uuid) => {
+        helperFunction.data.ignoreList.splice(helperFunction.data.ignoreList.indexOf(uuid), 1);
+        helperFunction.data.save();
+        ChatLib.chat(`&2[&dKath&2] &7Removed &c${args[1]} &7from the list of client side blocked users`)
+      }).catch((error) => { throw new Error(error) })
+    }
+  } catch (error) {
+    console.log(error)
+    ChatLib.chat(`&2[&dKath&2] &c${error}`)
+  }
+}).setName("hideuser")
 
 // ! Discord commands
 // ? off

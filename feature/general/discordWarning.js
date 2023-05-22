@@ -14,5 +14,4 @@ register('chat', (event) => {
   );
   ChatLib.chat(warningMessage)
   ChatLib.chat(disableMessage)
-
 })

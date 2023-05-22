@@ -1,5 +1,6 @@
 {
-    "firstTimeMsg": false,
-    "updateMessage1_3_1": false,
-    "discordWarningMessage": true
+  "firstTimeMsg": false,
+  "updateMessage1_3_1": false,
+  "discordWarningMessage": true,
+  "ignoreList": []
 }
