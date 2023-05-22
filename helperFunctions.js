@@ -49,7 +49,7 @@ export const viewChangeLog1_3_1 = () => {
   );
 
   ChatLib.chat(divider)
-  ChatLib.chat(`&dKath - &ev1.3.0`)
+  ChatLib.chat(`&dKath - &ev1.3.1`)
   ChatLib.chat(antiMysteryBox)
   ChatLib.chat(firstInstall)
   ChatLib.chat(skyblockJoiner)
