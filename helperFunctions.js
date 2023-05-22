@@ -24,7 +24,9 @@ export const ShowFirstLoginMessage = () => {
     ChatLib.getCenteredText(`&7Looks like this is your first using &dKath&7!`) + "\n",
     ChatLib.getCenteredText(`&7GUI command is &e/kath`) + "\n",
     ChatLib.getCenteredText(`&7Other commands`),
+    ChatLib.getCenteredText(`&7< > = Required arguments, [ ] = Optional arguments`),
     ChatLib.getCenteredText(`&d/limbo &e- &7Sends to Limbo`),
+    ChatLib.getCenteredText(`&d/wikisearch <search> &e- &7Sends to Limbo`),
     `\n${divider}`
   ]
 
@@ -35,6 +37,19 @@ export const ShowFirstLoginMessage = () => {
   })
 
   ChatLib.chat(finalText)
+}
+
+
+export const viewChangeLog1_4_0 = () => {
+  const wikiSearch = new Message(
+    new TextComponent("&7Added &e/wikisearch").setHover("show_text", `Searches the wiki for the given information`)
+  );
+
+  ChatLib.chat(divider)
+  ChatLib.chat(`&dKath - &ev1.4.0`)
+  ChatLib.chat(wikiSearch)
+  ChatLib.chat(divider)
+
 }
 
 export const viewChangeLog1_3_1 = () => {
@@ -49,7 +64,7 @@ export const viewChangeLog1_3_1 = () => {
   );
 
   ChatLib.chat(divider)
-  ChatLib.chat(`&dKath - &ev1.3.0`)
+  ChatLib.chat(`&dKath - &ev1.3.1`)
   ChatLib.chat(antiMysteryBox)
   ChatLib.chat(firstInstall)
   ChatLib.chat(skyblockJoiner)

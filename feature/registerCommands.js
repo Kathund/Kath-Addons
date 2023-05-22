@@ -3,22 +3,31 @@ import Settings from "../settings";
 const config = Settings
 
 
-// GUI
+// ! GUI
 register("command", () => config.openGUI()).setName("kath");
 
-// Limbo
+// ! Limbo
 register("command", () => ChatLib.say('§')).setName("limbo");
 
-// Discord commands
+// ! Wiki Search
+register("command", (...args) => {
+  let url = `${config.chatWikiSwapper ? `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join("+")}` : ""}`;
+  const wikiMessage = new Message(
+    new TextComponent(`Searched for ${args.join(" ")} using ${config.chatWikiSwapper ? "Fandom Wiki" : "Official Wiki"}`).setClick("open_url", url).setHover("show_text", url)
+  );
+  ChatLib.chat(wikiMessage)
+}).setName("wikisearch");
 
-// off
+
+// ! Discord commands
+// ? off
 register("command", () => {
   helperFunction.data.discordWarningMessage = false
   helperFunction.data.save();
   ChatLib.chat(`&2[&dKath&2] &7Turned&l&c off&r&7 discord warning message`)
 }).setName("discordwarningoff");
 
-// on
+// ? on
 register("command", () => {
   helperFunction.data.discordWarningMessage = true
   helperFunction.data.save();

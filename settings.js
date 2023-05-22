@@ -257,6 +257,28 @@ class Settings {
   // ? Change Logs
 
   @ButtonProperty({
+    name: "v1.4.0",
+    description: "View the change log for v1.4.0",
+    category: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_4_0() {
+    helperFunctions.viewChangeLog1_4_0();
+  };
+
+  @ButtonProperty({
+    name: "v1.3.1",
+    description: "View the change log for v1.3.1",
+    category: "Extra Info",
+    subcategory: "Change Log",
+    placeholder: "Show In Chat",
+  })
+  changeLog1_3_1() {
+    helperFunctions.viewChangeLog1_3_1();
+  };
+
+  @ButtonProperty({
     name: "v1.3.0",
     description: "View the change log for v1.3.0",
     category: "Extra Info",

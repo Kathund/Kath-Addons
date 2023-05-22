@@ -48,8 +48,13 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - `/limbo` - Sends the user to limbo
 - `/discordwarningoff` - Turns off the discord warning
 - `/discordwarningon` - Turns on the discord warning
+- `/wikisearch <search>` - Searches the wiki for the given information
 
 ## Change Log
+
+## v1.4.0
+
+- Added `/wikisearch` - Searches the wiki for the given information
 
 ## v1.3.1 - Bug fixes
 
