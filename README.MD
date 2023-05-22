@@ -57,6 +57,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 
 - Added `/wikisearch` - Searches the wiki for the given information
 - Added `/pt <username>` - Will transfer the party to the given username
+- Added more error catching
 
 ## v1.3.1 - Bug fixes
 

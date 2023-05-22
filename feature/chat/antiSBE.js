@@ -3,9 +3,14 @@ import Settings from "../../settings";
 const config = Settings
 
 register('chat', (event) => {
-  var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.chatAntiSBE) return;
-  if (message.includes("[SBE]")) {
-    cancel(event)
+  try {
+    var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
+    if (!config.chatAntiSBE) return;
+    if (message.includes("[SBE]")) {
+      cancel(event)
+    }
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&AutoWB &6> &c${error}`);
   }
 })
