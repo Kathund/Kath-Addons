@@ -1,6 +1,4 @@
 
-register("chat", (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/)
-
 // ! IMPORTANT
 
 import './feature/registerCommands.js';

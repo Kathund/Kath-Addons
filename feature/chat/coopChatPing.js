@@ -3,6 +3,11 @@ import Settings from "../../settings";
 const config = Settings
 
 register("chat", () => {
-  if (!config.chatCoopPing) return;
-  World.playSound("random.orb", 2, 1);
+  try {
+    if (!config.chatCoopPing) return;
+    World.playSound("random.orb", 2, 1);
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&AutoWB &6> &c${error}`);
+  }
 }).setCriteria("&r&bCo-op > ${*}");
