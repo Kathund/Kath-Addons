@@ -26,7 +26,8 @@ export const ShowFirstLoginMessage = () => {
     ChatLib.getCenteredText(`&7Other commands`),
     ChatLib.getCenteredText(`&7< > = Required arguments, [ ] = Optional arguments`),
     ChatLib.getCenteredText(`&d/limbo &e- &7Sends to Limbo`),
-    ChatLib.getCenteredText(`&d/wikisearch <search> &e- &7Sends to Limbo`),
+    ChatLib.getCenteredText(`&d/wikisearch <search> &e- &7Searches the wiki for what you entered`),
+    ChatLib.getCenteredText(`&d/pt <username> &e- &7Will transfer the party to the given username`),
     `\n${divider}`
   ]
 
@@ -42,12 +43,16 @@ export const ShowFirstLoginMessage = () => {
 
 export const viewChangeLog1_4_0 = () => {
   const wikiSearch = new Message(
-    new TextComponent("&7Added &e/wikisearch").setHover("show_text", `Searches the wiki for the given information`)
+    new TextComponent("&7Added &e/wikisearch <search>").setHover("show_text", `Searches the wiki for the given information`)
+  );
+  const fastParty = new Message(
+    new TextComponent("&7Added &e/pt <username>").setHover("show_text", `Will transfer the party to the given username`)
   );
 
   ChatLib.chat(divider)
   ChatLib.chat(`&dKath - &ev1.4.0`)
   ChatLib.chat(wikiSearch)
+  ChatLib.chat(fastParty)
   ChatLib.chat(divider)
 
 }

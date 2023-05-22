@@ -9,6 +9,22 @@ register("command", () => config.openGUI()).setName("kath");
 // ! Limbo
 register("command", () => ChatLib.say('§')).setName("limbo");
 
+// ! Fast Transfer
+register("command", (...args) => {
+  try {
+    if (args.length === 0) {
+      throw new Error("You cannot transfer to no one");
+    } else if (args[0] === Player.getName()) {
+      throw new Error("You cannot transfer to yourself");
+    } else {
+      ChatLib.chat(`/p transfer ${args[0]}`);
+    }
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&2[&dKath&2] &c${error}`);
+  }
+}).setName("pt");
+
 // ! Wiki Search
 register("command", (...args) => {
   let url = `${config.chatWikiSwapper ? `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join("+")}` : ""}`;
