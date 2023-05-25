@@ -67,7 +67,7 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(fastParty)
     ChatLib.chat(errorCatching)
     ChatLib.chat(throwing)
-    ChatLib.chat(throwingBan  )
+    ChatLib.chat(throwingBan)
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
