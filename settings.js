@@ -7,7 +7,7 @@ import { @Vigilant, @TextProperty, @ButtonProperty, @SwitchProperty, @SliderProp
     return categories.indexOf(a.name) - categories.indexOf(b.name);
   },
   getSubcategoryComparator: () => (a, b) => {
-    const subcategorys = ["General", "Info", "Other Projects", "Credits", "Change Log"];
+    const subcategorys = ["General", "Funny", "Info", "Other Projects", "Credits", "Change Log"];
     return subcategorys.indexOf(a.getValue()[0].attributesExt.subcategory) -
       subcategorys.indexOf(b.getValue()[0].attributesExt.subcategory);
   },
@@ -222,6 +222,14 @@ class Settings {
     subcategory: "General",
   })
   miscGiftWaypoints = false;
+
+  @SwitchProperty({
+    name: "Leave on throw",
+    description: "Will auto post a message about how you are throwing into party chat then will leave the party",
+    category: "Misc",
+    subcategory: "Funny"
+  })
+  miscLeaveOnThrow = false;
 
   // ! Extra Info
 
