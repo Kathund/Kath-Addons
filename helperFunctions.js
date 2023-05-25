@@ -57,6 +57,9 @@ export const viewChangeLog1_4_0 = () => {
     const throwing = new Message(
       new TextComponent("&7Leave on throw &8(hover)").setHover("show_text", 'Will auto post a message about how you are throwing into party chat then will leave the party')
     );
+    const throwingBan = new Message(
+      new TextComponent("&7Auto Ban on throw &8(hover)").setHover("show_text", 'Will display a fake ban message when throwing')
+    );
 
     ChatLib.chat(divider)
     ChatLib.chat(`&dKath - &ev1.4.0`)
@@ -64,6 +67,7 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(fastParty)
     ChatLib.chat(errorCatching)
     ChatLib.chat(throwing)
+    ChatLib.chat(throwingBan  )
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
