@@ -42,8 +42,6 @@ import './feature/chat/antiMysteryBox.js';
 
 import './feature/misc/arrowWarning.js';
 import './feature/misc/giftWaypoints.js';
-// ? funny
-import './feature/misc/funny/leaveOnThrow.js';
 
 // ! QOL
 
