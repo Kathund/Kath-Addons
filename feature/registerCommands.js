@@ -28,7 +28,14 @@ register("command", (...args) => {
 // ! Wiki Search
 register("command", (...args) => {
   try {
-    let url = `${config.chatWikiSwapper ? `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join("+")}` : ""}`;
+    let url = "";
+
+    if (config.chatWikiSwapper == true) {
+      url = `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join("+")}`;
+    } else if (config.chatWikiSwapper == false) {
+      url = `https://wiki.hypixel.net/index.php?search=${args.join("+")}`;
+    }
+
     const wikiMessage = new Message(
       new TextComponent(`Searched for ${args.join(" ")} using ${config.chatWikiSwapper ? "Fandom Wiki" : "Official Wiki"}`).setClick("open_url", url).setHover("show_text", url)
     );
@@ -69,7 +76,7 @@ register("command", () => {
   ChatLib.chat(`&dkath &6>&7 Turned&l&c off&r&7 discord warning message`)
 }).setName("discordwarningoff");
 
-// ? on
+// ? on 
 register("command", () => {
   helperFunction.data.discordWarningMessage = true
   helperFunction.data.save();
