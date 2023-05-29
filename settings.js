@@ -230,6 +230,14 @@ class Settings {
     subcategory: "Funny"
   })
   miscLeaveOnThrow = false;
+  
+  @SwitchProperty({
+    name: "Ban on throw",
+    description: "Will give a fake ban when you die",
+    category: "Misc",
+    subcategory: "Funny"
+  })
+  miscBanOnThrow = false;
 
   // ! Extra Info
 

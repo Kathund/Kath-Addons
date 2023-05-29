@@ -45,6 +45,10 @@ import './feature/misc/giftWaypoints.js';
 // ? funny
 import './feature/misc/funny/leaveOnThrow.js';
 
+// ? funny
+
+import './feature/misc/funny/leaveOnThrow.js';
+
 // ! QOL
 
 import './feature/qol/serverJoiner.js';
