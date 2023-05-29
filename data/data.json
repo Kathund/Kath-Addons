@@ -1,8 +1,9 @@
 {
-  "firstTimeMsg": false,
-  "updateMessage1_4_0": false,
-  "discordWarningMessage": true,
-  "fakebanned": false,
-  "banid": "",
-  "loadedgame": false
+    "firstTimeMsg": true,
+    "updateMessage1_4_0": false,
+    "discordWarningMessage": true,
+    "fakebanned": false,
+    "banid": "",
+    "loadedgame": false,
+    "loadegame": true
 }

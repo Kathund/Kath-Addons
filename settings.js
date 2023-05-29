@@ -1,16 +1,16 @@
 import * as helperFunctions from "./helperFunctions.js";
 let currentVersion = JSON.parse(FileLib.read("kath", "metadata.json")).version
-import { @Vigilant, @TextProperty, @ButtonProperty, @SwitchProperty, @SliderProperty } from 'Vigilance';
+import { @Vigilant, @TextProperty, @ButtonProperty, @SwitchProperty, @SliderProperty, @SelectorProperty } from 'Vigilance';
 @Vigilant('kath', 'kath', {
   getCategoryComparator: () => (a, b) => {
-    const categories = ['General', 'Dungeons', 'Gardens', 'Party', 'Chat', 'QOL', 'Misc', 'Extra Info'];
+    const categories = ['General', 'Dungeons', 'Gardens', 'Party', 'Chat', 'QOL', 'Misc', 'Extra Info', 'Change Log'];
     return categories.indexOf(a.name) - categories.indexOf(b.name);
   },
-  getSubcategoryComparator: () => (a, b) => {
-    const subcategorys = ["General", "Funny", "Info", "Other Projects", "Credits", "Change Log"];
-    return subcategorys.indexOf(a.getValue()[0].attributesExt.subcategory) -
-      subcategorys.indexOf(b.getValue()[0].attributesExt.subcategory);
-  },
+  // getSubcategoryComparator: () => (a, b) => {
+  //   const subcategorys = ["General", "Funny", "Info", "Other Projects", "Credits", "Change Log"];
+  //   return subcategorys.indexOf(a.getValue()[0].attributesExt.subcategory) -
+  //     subcategorys.indexOf(b.getValue()[0].attributesExt.subcategory);
+  // },
 })
 
 class Settings {
@@ -239,13 +239,14 @@ class Settings {
   })
   miscBanOnThrow = false;
 
-  @SwitchProperty({
-    name: "Permanent or 90 day ban?",
+  @SelectorProperty({
+    name: "Ban Type",
     description: "what type of ban only works if ban on throw is on!",
     category: "Misc",
-    subcategory: "Funny"
+    subcategory: "Funny",
+    options: ['30d', '90d', '360d', 'Perm'],
   })
-  miscBanAmount = false;
+  miscBanAmount = 0;
 
   // ! Extra Info
 
@@ -283,7 +284,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.4.0",
     description: "View the change log for v1.4.0",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -294,7 +295,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.3.1",
     description: "View the change log for v1.3.1",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -305,7 +306,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.3.0",
     description: "View the change log for v1.3.0",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -316,7 +317,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.2.0",
     description: "View the change log for v1.2.0",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -327,7 +328,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.1.2",
     description: "View the change log for v1.1.2",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -338,7 +339,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.1.1",
     description: "View the change log for v1.1.1",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -349,7 +350,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.1.0",
     description: "View the change log for v1.1.0",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
@@ -360,7 +361,7 @@ class Settings {
   @ButtonProperty({
     name: "v1.0.0",
     description: "View the change log for v1.0.0",
-    category: "Extra Info",
+    category: "Change Log",
     subcategory: "Change Log",
     placeholder: "Show In Chat",
   })
