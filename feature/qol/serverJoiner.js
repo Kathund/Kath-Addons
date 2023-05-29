@@ -1,3 +1,4 @@
+import * as helperFunction from "../../../helperFunctions.js";
 import { Promise } from '../../../PromiseV2';
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 import Settings from "../../settings";
@@ -6,6 +7,7 @@ const config = Settings
 let join = false;
 register("postGuiRender", (mx, my, gui) => {
   try {
+    helperFunction.data.loadegame = true;
     if (!(gui instanceof net.minecraft.client.gui.GuiMainMenu)) return;
     if (!config.qolServerJoiner) return;
     if (join) return;

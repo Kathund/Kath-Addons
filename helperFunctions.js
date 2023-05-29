@@ -11,7 +11,9 @@ export const divider = "&a&m            &d&m            &e&m            &a&m    
 export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_4_0": false,
-  "discordWarningMessage": true
+  "discordWarningMessage": true,
+  "fakebanned": false,
+  "banid": ""
 }, "data/data.json")
 
 export const ShowFirstLoginMessage = () => {
