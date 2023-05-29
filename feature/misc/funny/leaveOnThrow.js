@@ -4,7 +4,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 import Settings from "../../../settings";
 const config = Settings
 
-const indungeon = false;
+let indungeon = false;
 
 register("chat", (event) => {
    var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
