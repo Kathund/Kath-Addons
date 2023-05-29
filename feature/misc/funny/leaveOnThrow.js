@@ -13,18 +13,43 @@ register("chat", (event) => {
       delay(300).then(() => ChatLib.say("/p leave")).then(() => {
         if (config.miscBanOnThrow) {
           var text = "";
-          var charset = "abcdefghijklmnopqrstuvwxyz0123456789";
+          var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     
           for (var i = 0; i < 8; i++) {
             text += charset.charAt(Math.floor(Math.random() * charset.length));
           }
     
           delay(800).then(() => {
+            helperFunction.data.fakebanned = true;
+            helperFunction.data.banid = text;
+            helperFunction.data.loadegame = false;
             const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
             Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanemtly banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
           }) 
         }
       })
+    }
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&AutoWB &6> &c${error}`);
+  }
+})
+
+register('chat', (event) => {
+  try {
+    var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
+    if(!message.includes(`${Player.getName()} joined the lobby!`)) return;
+
+    if (helperFunction.data.fakebanned == true && helperFunction.data.loadegame == false) {
+      var text = helperFunction.data.banid;
+      const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
+
+      delay(300).then(() => {
+        Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanemtly banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+      })
+    } else {
+      helperFunction.data.fakebanned = false;
+      helperFunction.data.banid = "";
     }
   } catch (error) {
     console.log(error);
