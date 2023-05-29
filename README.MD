@@ -60,6 +60,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added `/pt <username>` - Will transfer the party to the given username
 - Added more error catching
 - Added Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
+- Added Auto ban on throw - Will display a fake ban message when throwing
 
 ## v1.3.1 - Bug fixes
 
