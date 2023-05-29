@@ -239,6 +239,14 @@ class Settings {
   })
   miscBanOnThrow = false;
 
+  @SwitchProperty({
+    name: "Permanent or 90 day ban?",
+    description: "what type of ban only works if ban on throw is on!",
+    category: "Misc",
+    subcategory: "Funny"
+  })
+  miscBanAmount = false;
+
   // ! Extra Info
 
   @ButtonProperty({

@@ -4,6 +4,8 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 import Settings from "../../../settings";
 const config = Settings
 
+let banamount = null;
+
 register("chat", (event) => {
   try {
     if (!config.miscLeaveOnThrow) return
@@ -18,13 +20,19 @@ register("chat", (event) => {
           for (var i = 0; i < 8; i++) {
             text += charset.charAt(Math.floor(Math.random() * charset.length));
           }
-    
+          
           delay(800).then(() => {
             helperFunction.data.fakebanned = true;
             helperFunction.data.banid = text;
             helperFunction.data.loadegame = false;
+
             const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
-            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanemtly banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+
+            if(config.miscBanAmount == true) {
+              Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+            } else {
+              Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f90d §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+            }
           }) 
         }
       })
@@ -45,7 +53,11 @@ register('chat', (event) => {
       const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
 
       delay(300).then(() => {
-        Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanemtly banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        if(config.miscBanAmount == true) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        } else {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f90d §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        }
       })
     } else {
       helperFunction.data.fakebanned = false;
