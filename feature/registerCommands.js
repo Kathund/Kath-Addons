@@ -55,7 +55,7 @@ register("command", () => {
   ChatLib.chat(`&dkath &6>&7 Turned&l&c off&r&7 discord warning message`)
 }).setName("discordwarningoff");
 
-// ? on
+// ? on 
 register("command", () => {
   helperFunction.data.discordWarningMessage = true
   helperFunction.data.save();
