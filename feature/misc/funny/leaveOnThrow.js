@@ -38,7 +38,7 @@ register("chat", (event) => {
 register('chat', (event) => {
   try {
     var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-    if(!message.includes(`${Player.getName()} joined the lobby!`)) return;
+    if(!message.includes(`${Player.getName()} joined the lobby!`) || !message.includes("Guild: Message Of The Day")) return;
 
     if (helperFunction.data.fakebanned == true && helperFunction.data.loadegame == false) {
       var text = helperFunction.data.banid;
