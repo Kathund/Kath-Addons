@@ -240,13 +240,22 @@ class Settings {
   miscBanOnThrow = true;
 
   @SelectorProperty({
-    name: "Ban Type",
-    description: "what type of ban only works if ban on throw is on!",
+    name: "Ban Length",
+    description: "How long do you want the ban to be",
     category: "Misc",
     subcategory: "Funny",
     options: ['7d', '14d', '30d', '90d', '180d', '360d', 'Perm'],
   })
-  miscBanAmount = 0;
+  miscBanLength = 3;
+
+  @SelectorProperty({
+    name: "Ban Type",
+    description: "What ban reason do you want",
+    category: "Misc",
+    subcategory: "Funny",
+    options: ['Cheating', 'Boosting', 'Chat Infraction', 'Username'],
+  })
+  miscBanType = 2;
 
   // ! Extra Info
 

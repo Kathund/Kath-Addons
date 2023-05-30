@@ -53,20 +53,56 @@ register('chat', (event) => {
       const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
 
       delay(300).then(() => {
-        if (config.miscBanAmount === 0) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f6d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if (config.miscBanAmount === 1) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f13d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if (config.miscBanAmount === 2) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f29d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if (config.miscBanAmount === 3) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f89d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if (config.miscBanAmount === 4) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f179d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if (config.miscBanAmount === 5) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f359d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if (config.miscBanAmount === 6) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        if (config.miscBanType === 0) {
+          if (config.miscBanAmount === 0) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f6d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 1) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f13d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 2) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f29d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 3) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f89d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 4) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f179d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 5) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f359d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 6) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          }
+        } else if (config.miscBanType === 1) {
+          if (config.miscBanAmount === 0) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f6d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 1) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f13d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 2) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f29d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 3) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f89d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 4) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f179d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 5) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f359d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 6) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fBoosting detected on one or multiple Skyblock profiles.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          }
+        } else if (config.miscBanType === 2) {
+          if (config.miscBanAmount === 0) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f6d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fExtreme Chat Infraction.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 1) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f13d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fExtreme Chat Infraction.n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 2) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f29d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fExtreme Chat Infraction.n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 3) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f89d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fExtreme Chat Infraction.n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 4) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f179d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fExtreme Chat Infraction.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 5) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f359d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fExtreme Chat Infraction.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          } else if (config.miscBanAmount === 6) {
+            Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fExtreme Chat Infraction. \n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+          }
+        } else if (config.miscBanType === 3) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are currently blocked from joining this server!\n§r\n§7Reason: §fYour username, ${Player.getName()}, is not allowed on the server and is breaking our rules.\n§7Find out more: §b§nhttps://www.hypixel.net/rules\n§r\n§cPlease change your Minecraft username before trying to join again.\n§cIf you believe your name has been falsely blocked, contact §b§nhttps://support.hypixel.net`))
         }
       })
     } else {
