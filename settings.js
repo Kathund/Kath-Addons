@@ -229,7 +229,7 @@ class Settings {
     category: "Misc",
     subcategory: "Funny"
   })
-  miscLeaveOnThrow = false;
+  miscLeaveOnThrow = true;
 
   @SwitchProperty({
     name: "Ban on throw",
@@ -255,7 +255,7 @@ class Settings {
     subcategory: "Funny",
     options: ['Cheating', 'Boosting', 'Chat Infraction', 'Username'],
   })
-  miscBanType = 2;
+  miscBanType = 1;
 
   // ! Extra Info
 
