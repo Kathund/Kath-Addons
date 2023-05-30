@@ -16,11 +16,11 @@ register("chat", (event) => {
         if (config.miscBanOnThrow) {
           var text = "";
           var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    
+
           for (var i = 0; i < 8; i++) {
             text += charset.charAt(Math.floor(Math.random() * charset.length));
           }
-          
+
           delay(800).then(() => {
             helperFunction.data.fakebanned = true;
             helperFunction.data.banid = text;
@@ -28,12 +28,12 @@ register("chat", (event) => {
 
             const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
 
-            if(config.miscBanAmount == 0) {
+            if (config.miscBanAmount == 0) {
               Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
             } else {
               Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f90d §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
             }
-          }) 
+          })
         }
       })
     }
@@ -46,22 +46,26 @@ register("chat", (event) => {
 register('chat', (event) => {
   try {
     var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-    if(!message.includes(`${Player.getName()} joined the lobby!`) || !message.includes("Guild: Message Of The Day")) return;
+    if (!message.includes(`${Player.getName()} joined the lobby!`) || !message.includes("Guild: Message Of The Day")) return;
 
     if (helperFunction.data.fakebanned == true && helperFunction.data.loadegame == false) {
       var text = helperFunction.data.banid;
       const ChatComponentText = Java.type("net.minecraft.util.ChatComponentText");
 
       delay(300).then(() => {
-        if(config.miscBanAmount == 0) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f30d §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if(config.miscBanAmount == 1) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f90d §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if(config.miscBanAmount == 2) {
-          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f360d §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } else if(config.miscBanAmount == 3) {
+        if (config.miscBanAmount === 0) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f13d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        } else if (config.miscBanAmount === 1) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f29d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        } else if (config.miscBanAmount === 2) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f89d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        } else if (config.miscBanAmount === 3) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f179d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        } else if (config.miscBanAmount === 4) {
+          Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are temporarily banned for §f359d 23h 59m 59s §cfrom this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
+        } else if (config.miscBanAmount === 4) {
           Client.getMinecraft().func_147114_u().func_147298_b().func_150718_a(new ChatComponentText(`§cYou are permanently banned from this server!\n§r\n§7Reason: §fCheating through the use of unfair game advantages.\n§7Find out more: §b§nhttps://www.hypixel.net/appeal\n§r\n§7Ban ID: §f#${text}\n§7Sharing your Ban ID may affect the processing of your appeal!`))
-        } 
+        }
       })
     } else {
       helperFunction.data.fakebanned = false;
