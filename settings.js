@@ -244,7 +244,7 @@ class Settings {
     description: "what type of ban only works if ban on throw is on!",
     category: "Misc",
     subcategory: "Funny",
-    options: ['14d', '30d', '90d', '180d', '360d', 'Perm'],
+    options: ['7d', '14d', '30d', '90d', '180d', '360d', 'Perm'],
   })
   miscBanAmount = 0;
 
