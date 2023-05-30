@@ -40,6 +40,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the Jerry's workshop event
   - Discord link warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
   - Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
+  - Ban on throw - Will show a fake ban message on your screen after sending a message in chat about how you are throwing
 
 ## Commands
 

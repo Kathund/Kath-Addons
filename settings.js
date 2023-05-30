@@ -237,7 +237,7 @@ class Settings {
     category: "Misc",
     subcategory: "Funny"
   })
-  miscBanOnThrow = false;
+  miscBanOnThrow = true;
 
   @SelectorProperty({
     name: "Ban Type",
