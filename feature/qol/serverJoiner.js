@@ -1,4 +1,4 @@
-import * as helperFunction from "../../../helperFunctions.js";
+import * as helperFunction from "../../helperFunctions.js";
 import { Promise } from '../../../PromiseV2';
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 import Settings from "../../settings";
