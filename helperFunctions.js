@@ -1,5 +1,8 @@
 import PogObject from "../PogData/index"
+import Settings from "./settings";
 import axios from "../axios";
+const config = Settings
+
 
 export const removeColors = function (text) {
   const cleanText = text.replace(/§./g, "");
@@ -13,8 +16,10 @@ export const data = new PogObject("kath", {
   "updateMessage1_4_0": false,
   "discordWarningMessage": true,
   "fakeBanned": false,
-  "banID": ""
+  "banID": "",
+  "banTimestamp": 0
 }, "data/data.json")
+data.autosave(2)
 
 export const ShowFirstLoginMessage = () => {
   try {
@@ -40,7 +45,7 @@ export const ShowFirstLoginMessage = () => {
     ChatLib.chat(finalText)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -73,7 +78,7 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -97,7 +102,7 @@ export const viewChangeLog1_3_1 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -133,7 +138,7 @@ export const viewChangeLog1_3_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -169,7 +174,7 @@ export const viewChangeLog1_2_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -185,7 +190,7 @@ export const viewChangeLog1_1_2 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -201,7 +206,7 @@ export const viewChangeLog1_1_1 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -253,7 +258,7 @@ export const viewChangeLog1_1_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -321,7 +326,7 @@ export const viewChangeLog1_0_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }
 
@@ -339,4 +344,27 @@ export const genID = () => {
 
 export const removeRank = (username) => {
   return username.replace(/\[[\w+\+-]+] /, "")
+}
+
+export const calculateRemainingTime = (startingTimestamp) => {
+  try {
+    let length;
+    if (config.miscBanLength === 0) { length = 7 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 1) { length = 14 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 2) { length = 30 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 3) { length = 90 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 4) { length = 180 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 5) { length = 360 * 24 * 60 * 60 }
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    const elapsedTime = currentTimestamp - startingTimestamp;
+    const remainingTime = length - elapsedTime;
+    const days = Math.floor(remainingTime / (24 * 60 * 60));
+    const hours = Math.floor((remainingTime / (60 * 60)) % 24);
+    const minutes = Math.floor((remainingTime / 60) % 60);
+    const seconds = remainingTime % 60;
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
+  }
 }

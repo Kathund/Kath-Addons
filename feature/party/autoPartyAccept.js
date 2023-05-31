@@ -7,6 +7,6 @@ register("chat", (player) => {
     ChatLib.command(`p accept ${player}`)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dAutoWB &6> &c${error}`);
   }
 }).setCriteria(/^(?:\[[^\]]+\] )(\w+) has invited you to join their party!/)
