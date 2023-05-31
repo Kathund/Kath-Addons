@@ -7,7 +7,7 @@ const config = Settings
 let join = false;
 register("postGuiRender", (mx, my, gui) => {
   try {
-    helperFunction.data.loadegame = true;
+    helperFunction.data.loadGame = true;
     if (!(gui instanceof net.minecraft.client.gui.GuiMainMenu)) return;
     if (!config.qolServerJoiner) return;
     if (join) return;
