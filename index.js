@@ -44,10 +44,7 @@ import './feature/misc/arrowWarning.js';
 import './feature/misc/giftWaypoints.js';
 // ? funny
 import './feature/misc/funny/leaveOnThrow.js';
-
-// ? funny
-
-import './feature/misc/funny/leaveOnThrow.js';
+import './feature/misc/funny/banOnThrow.js';
 
 // ! QOL
 

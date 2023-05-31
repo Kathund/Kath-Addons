@@ -12,8 +12,8 @@ export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_4_0": false,
   "discordWarningMessage": true,
-  "fakebanned": false,
-  "banid": ""
+  "fakeBanned": false,
+  "banID": ""
 }, "data/data.json")
 
 export const ShowFirstLoginMessage = () => {
