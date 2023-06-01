@@ -278,6 +278,15 @@ class Settings {
   infoDev() { };
 
   @ButtonProperty({
+    name: "&b&lZickles",
+    description: "Dumb ass who made a pr (Made ban on throw)",
+    category: "Extra Info",
+    subcategory: "Info",
+    placeholder: " "
+  })
+  infoZickles() { };
+
+  @ButtonProperty({
     name: "Auto Welcome Back",
     description: "A Simple Chat triggers module that allows you to welcome guild members back when they join and is highly customizable",
     category: "Extra Info",
