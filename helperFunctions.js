@@ -53,10 +53,10 @@ export const ShowFirstLoginMessage = () => {
 export const viewChangeLog1_4_0 = () => {
   try {
     const wikiSearch = new Message(
-      new TextComponent("&7Added &e/wikisearch <search>").setHover("show_text", `Searches the wiki for the given information`)
+      new TextComponent("&7Added &e/wikisearch <search> &8(hover)").setHover("show_text", `Searches the wiki for the given information`)
     );
     const fastParty = new Message(
-      new TextComponent("&7Added &e/pt <username>").setHover("show_text", `Will transfer the party to the given username`)
+      new TextComponent("&7Added &e/pt <username> &8(hover)").setHover("show_text", `Will transfer the party to the given username`)
     );
     const errorCatching = new Message(
       new TextComponent("&7Added more error catching")
@@ -67,6 +67,9 @@ export const viewChangeLog1_4_0 = () => {
     const throwingBan = new Message(
       new TextComponent("&7Auto Ban on throw &8(hover)").setHover("show_text", 'Will display a fake ban message when throwing')
     );
+    const antiProfileID = new Message(
+      new TextComponent("&7Anti Profile id &8(hover)").setHover("show_text", 'Hides the profile id messages')
+    );
 
     ChatLib.chat(divider)
     ChatLib.chat(`&dKath - &ev1.4.0`)
@@ -75,6 +78,7 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(errorCatching)
     ChatLib.chat(throwing)
     ChatLib.chat(throwingBan)
+    ChatLib.chat(antiProfileID)
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);

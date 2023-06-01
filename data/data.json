@@ -1,5 +1,5 @@
 {
-    "firstTimeMsg": false,
+    "firstTimeMsg": true,
     "updateMessage1_4_0": false,
     "discordWarningMessage": true,
     "fakeBanned": false,

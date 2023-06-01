@@ -178,6 +178,14 @@ class Settings {
   })
   chatAntiMysteryBox = false;
 
+  @SwitchProperty({
+    name: "Anti Profile ID",
+    description: "Hides the profile id messages",
+    category: "Chat",
+    subcategory: "General",
+  })
+  chatAntiProfile = false;
+
   // ! QOL
 
   @SwitchProperty({

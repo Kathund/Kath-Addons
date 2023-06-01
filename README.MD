@@ -62,6 +62,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added more error catching
 - Added Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
 - Added Auto ban on throw - Will display a fake ban message when throwing
+- Added Anti Profile id - Hides the profile id messages
 
 ## v1.3.1 - Bug fixes
 
