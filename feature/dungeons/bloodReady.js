@@ -8,6 +8,6 @@ register("chat", () => {
     if (config.generalAlertSound) World.playSound("random.orb", 2, 1)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }).setCriteria(/^\[BOSS\] The Watcher: That will be enough for now\.$/)

@@ -12,6 +12,6 @@ register('chat', (event) => {
     World.playSound("random.orb", 2, 1);
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }).setCriteria(/[A-Za-z]+ has arrived on your Garden/)

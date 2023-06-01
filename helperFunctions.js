@@ -40,7 +40,7 @@ export const ShowFirstLoginMessage = () => {
     ChatLib.chat(finalText)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -73,7 +73,7 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -97,7 +97,7 @@ export const viewChangeLog1_3_1 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -133,7 +133,7 @@ export const viewChangeLog1_3_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -169,7 +169,7 @@ export const viewChangeLog1_2_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -185,7 +185,7 @@ export const viewChangeLog1_1_2 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -201,7 +201,7 @@ export const viewChangeLog1_1_1 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -253,7 +253,7 @@ export const viewChangeLog1_1_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
@@ -321,7 +321,7 @@ export const viewChangeLog1_0_0 = () => {
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
 
