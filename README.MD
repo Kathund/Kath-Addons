@@ -1,3 +1,5 @@
+[![trophy](https://github-profile-trophy.vercel.app/?username=kathund&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+
 # Kath - Kathund#2004
 
 [Chattriggers Module](https://www.chattriggers.com/modules/v/Kath)

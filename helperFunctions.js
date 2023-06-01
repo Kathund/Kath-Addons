@@ -27,7 +27,7 @@ export const ShowFirstLoginMessage = () => {
     data.save();
     let stringArray = [
       `${divider}`,
-      ChatLib.getCenteredText(`&dKath Addons &7- &e${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
+      ChatLib.getCenteredText(`&dkath &7- &e${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
       ChatLib.getCenteredText(`&7Looks like this is your first using &dKath&7!`) + "\n",
       ChatLib.getCenteredText(`&7GUI command is &e/kath`) + "\n",
       ChatLib.getCenteredText(`&7Other commands`),
