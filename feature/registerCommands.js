@@ -59,7 +59,6 @@ register("command", () => {
     }
 
     delay(800).then(() => {
-      console.log(Math.floor(Date.now() / 1000))
       helperFunction.data.fakeBanned = true;
       helperFunction.data.banID = banID;
       helperFunction.data.banTimestamp = Math.floor(Date.now() / 1000)
