@@ -1,8 +1,8 @@
 {
-    "firstTimeMsg": true,
+    "firstTimeMsg": false,
     "updateMessage1_4_0": false,
     "discordWarningMessage": true,
-    "fakeBanned": true,
-    "banID": "BKQM2SL0",
-    "banTimestamp": 1685529246
+    "fakeBanned": false,
+    "banID": "",
+    "banTimestamp": 0
 }
