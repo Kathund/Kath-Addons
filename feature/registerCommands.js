@@ -23,7 +23,7 @@ register("command", (...args) => {
     }
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&dAutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }).setName("pt");
 
@@ -44,7 +44,7 @@ register("command", (...args) => {
     ChatLib.chat(wikiMessage)
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&dAutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }).setName("wikisearch");
 
@@ -120,7 +120,7 @@ register("command", () => {
     })
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&dAutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }).setName("getbanned");
 

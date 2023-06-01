@@ -20,6 +20,6 @@ register("postGuiRender", (mx, my, gui) => {
     delay(150).then(() => Client.connect(config.qolServerIP)).then(() => join = true).then(() => delay(1000)).then(() => join = false);
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&dAutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 })

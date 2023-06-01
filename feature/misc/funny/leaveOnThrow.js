@@ -13,6 +13,6 @@ register("chat", (event) => {
     delay(300).then(() => ChatLib.say("/p leave"))
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&dAutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 })
