@@ -7,8 +7,13 @@ const config = Settings
 let join = false;
 register("postGuiRender", (mx, my, gui) => {
   try {
-    helperFunction.data.loadegame = true;
     if (!(gui instanceof net.minecraft.client.gui.GuiMainMenu)) return;
+    if (helperFunction.data.fakeBanned === true) {
+      helperFunction.data.fakeBanned = false
+      helperFunction.data.banID = ""
+      helperFunction.data.banTimestamp = 0
+      helperFunction.data.save()
+    }
     if (!config.qolServerJoiner) return;
     if (join) return;
     join = true

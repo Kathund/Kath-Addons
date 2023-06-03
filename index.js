@@ -37,6 +37,7 @@ import './feature/chat/coopChatPing.js';
 import './feature/chat/cyberBully.js';
 import './feature/chat/wikiSwapper.js';
 import './feature/chat/antiMysteryBox.js';
+import './feature/chat/antiProfileId.js';
 
 // ! Misc
 
@@ -44,10 +45,7 @@ import './feature/misc/arrowWarning.js';
 import './feature/misc/giftWaypoints.js';
 // ? funny
 import './feature/misc/funny/leaveOnThrow.js';
-
-// ? funny
-
-import './feature/misc/funny/leaveOnThrow.js';
+import './feature/misc/funny/banOnThrow.js';
 
 // ! QOL
 

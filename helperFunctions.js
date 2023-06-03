@@ -1,5 +1,8 @@
 import PogObject from "../PogData/index"
+import Settings from "./settings";
 import axios from "../axios";
+const config = Settings
+
 
 export const removeColors = function (text) {
   const cleanText = text.replace(/§./g, "");
@@ -12,9 +15,11 @@ export const data = new PogObject("kath", {
   "firstTimeMsg": false,
   "updateMessage1_4_0": false,
   "discordWarningMessage": true,
-  "fakebanned": false,
-  "banid": ""
+  "fakeBanned": false,
+  "banID": "",
+  "banTimestamp": 0
 }, "data/data.json")
+data.autosave(2)
 
 export const ShowFirstLoginMessage = () => {
   try {
@@ -22,7 +27,7 @@ export const ShowFirstLoginMessage = () => {
     data.save();
     let stringArray = [
       `${divider}`,
-      ChatLib.getCenteredText(`&dKath Addons &7- &e${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
+      ChatLib.getCenteredText(`&dkath &7- &e${JSON.parse(FileLib.read("kath", "metadata.json")).version} `) + "\n",
       ChatLib.getCenteredText(`&7Looks like this is your first using &dKath&7!`) + "\n",
       ChatLib.getCenteredText(`&7GUI command is &e/kath`) + "\n",
       ChatLib.getCenteredText(`&7Other commands`),
@@ -48,10 +53,10 @@ export const ShowFirstLoginMessage = () => {
 export const viewChangeLog1_4_0 = () => {
   try {
     const wikiSearch = new Message(
-      new TextComponent("&7Added &e/wikisearch <search>").setHover("show_text", `Searches the wiki for the given information`)
+      new TextComponent("&7Added &e/wikisearch <search> &8(hover)").setHover("show_text", `Searches the wiki for the given information`)
     );
     const fastParty = new Message(
-      new TextComponent("&7Added &e/pt <username>").setHover("show_text", `Will transfer the party to the given username`)
+      new TextComponent("&7Added &e/pt <username> &8(hover)").setHover("show_text", `Will transfer the party to the given username`)
     );
     const errorCatching = new Message(
       new TextComponent("&7Added more error catching")
@@ -62,6 +67,9 @@ export const viewChangeLog1_4_0 = () => {
     const throwingBan = new Message(
       new TextComponent("&7Auto Ban on throw &8(hover)").setHover("show_text", 'Will display a fake ban message when throwing')
     );
+    const antiProfileID = new Message(
+      new TextComponent("&7Anti Profile id &8(hover)").setHover("show_text", 'Hides the profile id messages')
+    );
 
     ChatLib.chat(divider)
     ChatLib.chat(`&dKath - &ev1.4.0`)
@@ -70,6 +78,7 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(errorCatching)
     ChatLib.chat(throwing)
     ChatLib.chat(throwingBan)
+    ChatLib.chat(antiProfileID)
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
@@ -339,4 +348,27 @@ export const genID = () => {
 
 export const removeRank = (username) => {
   return username.replace(/\[[\w+\+-]+] /, "")
+}
+
+export const calculateRemainingTime = (startingTimestamp) => {
+  try {
+    let length;
+    if (config.miscBanLength === 0) { length = 7 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 1) { length = 14 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 2) { length = 30 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 3) { length = 90 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 4) { length = 180 * 24 * 60 * 60 }
+    else if (config.miscBanLength === 5) { length = 360 * 24 * 60 * 60 }
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    const elapsedTime = currentTimestamp - startingTimestamp;
+    const remainingTime = length - elapsedTime;
+    const days = Math.floor(remainingTime / (24 * 60 * 60));
+    const hours = Math.floor((remainingTime / (60 * 60)) % 24);
+    const minutes = Math.floor((remainingTime / 60) % 60);
+    const seconds = remainingTime % 60;
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
+  }
 }
