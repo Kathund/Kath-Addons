@@ -115,7 +115,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added Alert Sound - Plays a sound when an alert gets displayed
 - Added quiz fail message to cyber bully dungeons
 
-### v1.0.0
+## v1.0.0
 
 - Added `/kath` to open gui
 - Added New Features
