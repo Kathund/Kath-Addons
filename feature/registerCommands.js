@@ -738,7 +738,7 @@ register('chat', (event) => {
       message.includes(':mc_shears:') ||
       message.includes(':mc_fishing_rod:')) {
       cancel(event)
-      ChatLib.chat(`${helperFunction.emojis(ChatLib.getChatMessage(event).toString())}`)
+      ChatLib.chat(`${helperFunction.emojis((ChatLib.getChatMessage(event)).toString())}`)
     }
   } catch (error) {
     console.log(error);
