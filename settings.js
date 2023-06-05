@@ -253,7 +253,7 @@ class Settings {
     category: "Misc",
     subcategory: "Funny"
   })
-  miscCrashOnThrow = true;
+  miscCrashOnThrow = false;
 
   @SelectorProperty({
     name: "Ban Length",
