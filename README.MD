@@ -39,8 +39,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the Jerry's workshop event
   - Discord link warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
-  - Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
-  - Ban on throw - Will show a fake ban message on your screen after sending a message in chat about how you are throwing
+  - Funny
+    - Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
+    - Ban on throw - Will show a fake ban message on your screen after sending a message in chat about how you are throwing
+    - Crash on Throw - Will crash your game when throwing
 
 ## Commands
 
@@ -63,6 +65,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
 - Added Auto ban on throw - Will display a fake ban message when throwing
 - Added Anti Profile id - Hides the profile id messages
+- Added Crash on Throw - Will crash your game when throwing
 
 ## v1.3.1 - Bug fixes
 
