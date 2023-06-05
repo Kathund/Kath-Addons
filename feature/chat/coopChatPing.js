@@ -1,4 +1,3 @@
-import * as helperFunction from "../../helperFunctions.js";
 import Settings from "../../settings";
 const config = Settings
 
