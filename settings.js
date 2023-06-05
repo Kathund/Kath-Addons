@@ -247,6 +247,14 @@ class Settings {
   })
   miscBanOnThrow = true;
 
+  @SwitchProperty({
+    name: "Crash on throw",
+    description: "Will crash your game when you die",
+    category: "Misc",
+    subcategory: "Funny"
+  })
+  miscCrashOnThrow = true;
+
   @SelectorProperty({
     name: "Ban Length",
     description: "How long do you want the ban to be",
