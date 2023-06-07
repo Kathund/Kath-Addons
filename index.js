@@ -8,6 +8,8 @@ import './feature/registerCommands.js';
 import './feature/general/discordWarning.js';
 import './feature/general/firstInstall.js';
 import './feature/general/changeLog.js';
+// ? Emojis
+import './feature/general/emojis/chat.js';
 
 // ! Dungeons
 

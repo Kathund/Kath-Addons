@@ -32,6 +32,26 @@ class Settings {
   })
   generalShowChangeLog = false;
 
+  @SwitchProperty({
+    name: "Emojis",
+    description: "Converts :skull: to the skull emoji in mc chat",
+    category: "General",
+    subcategory: "Emojis",
+  })
+  generalEmojis = false;
+
+  @ButtonProperty({
+    name: "Emojis texture pack",
+    description: "Link to download the emojis texture pack that is required for the emojis to work",
+    category: "General",
+    subcategory: "Emojis",
+    placeholder: "Download",
+  })
+  emojis() {
+    // ! place holder url
+    java.awt.Desktop.getDesktop().browse(new java.net.URI("https://github.com/Kathund/kath/releases/download/1.3.1/kath-1.3.1.zip"))
+  };
+
   // ! Dungeons
 
   @SwitchProperty({

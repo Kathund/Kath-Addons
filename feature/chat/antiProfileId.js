@@ -5,7 +5,6 @@ const config = Settings
 register('chat', (event) => {
   try {
     var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-    console.log(config.chatAntiProfile)
     if (!config.chatAntiProfile) return;
     if (message.includes("Profile ID:") && message.includes("-")) {
       cancel(event)
