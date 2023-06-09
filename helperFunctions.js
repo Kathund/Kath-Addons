@@ -82,7 +82,10 @@ export const viewChangeLog1_4_0 = () => {
       new TextComponent("&7Anti Profile id &8(hover)").setHover("show_text", 'Hides the profile id messages')
     );
     const emojis = new Message(
-      new TextComponent("&EMOJIS &8(click)").setHover("show_text", 'run /emojiinfo for more info on emojis').setClick("run_command", `/emojiinfo`)
+      new TextComponent("&7EMOJIS &8(click)").setHover("show_text", 'run /emojiinfo for more info on emojis').setClick("run_command", `/emojiinfo`)
+    );
+    const update = new Message(
+      new TextComponent("&7Auto Update Checker &8(hover)").setHover("show_text", 'Will check if your on the latest version. If not it will scream at you')
     );
 
     ChatLib.chat(divider)
@@ -93,6 +96,8 @@ export const viewChangeLog1_4_0 = () => {
     ChatLib.chat(throwing)
     ChatLib.chat(throwingBan)
     ChatLib.chat(antiProfileID)
+    ChatLib.chat(emojis)
+    ChatLib.chat(update)
     ChatLib.chat(divider)
   } catch (error) {
     console.log(error);
@@ -386,3 +391,5 @@ export const calculateRemainingTime = (startingTimestamp) => {
     ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }
+
+export const getLatestVersion = () => axios.get(`https://raw.githubusercontent.com/Kathund/kath/main/metadata.json`).then(response => response.data.versoin).catch(e => { console.log(e) })

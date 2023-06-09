@@ -1,6 +1,6 @@
 
 // ! IMPORTANT
-
+import  './feature/checkVersion.js'
 import './feature/registerCommands.js';
 
 // ! General

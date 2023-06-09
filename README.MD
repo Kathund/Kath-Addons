@@ -69,6 +69,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added Crash on Throw - Will crash your game when throwing
 - Added EMOJIS - Swaps out :skull: for an skull emoji client side
 - Added `/emojiinfo` - Shows an example of how the emojis work
+- Added Auto Update Checker - Will check if your on the latest version. If not it will scream at you
 
 ## v1.3.1 - Bug fixes
 
