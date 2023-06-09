@@ -392,4 +392,4 @@ export const calculateRemainingTime = (startingTimestamp) => {
   }
 }
 
-export const getLatestVersion = () => axios.get(`https://raw.githubusercontent.com/Kathund/kath/main/metadata.json`).then(response => response.data.versoin).catch(e => { console.log(e) })
+export const getLatestVersion = () => axios.get(`https://raw.githubusercontent.com/Kathund/kath/main/metadata.json`).then(response => response.data.version).catch(e => { console.log(e) })
