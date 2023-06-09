@@ -12,6 +12,6 @@ register('chat', (event) => {
     }
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 })

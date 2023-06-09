@@ -1,6 +1,6 @@
 
 // ! IMPORTANT
-
+import  './feature/checkVersion.js'
 import './feature/registerCommands.js';
 
 // ! General
@@ -14,6 +14,9 @@ import './feature/general/changeLog.js';
 import './feature/dungeons/bloodReady.js'
 import './feature/dungeons/cyberBullyDungeons.js'
 import './feature/dungeons/spiritBow.js';
+
+// ! Emojis
+import './feature/emojis/chat.js';
 
 // ! Gardens
 
@@ -37,11 +40,16 @@ import './feature/chat/coopChatPing.js';
 import './feature/chat/cyberBully.js';
 import './feature/chat/wikiSwapper.js';
 import './feature/chat/antiMysteryBox.js';
+import './feature/chat/antiProfileId.js';
 
 // ! Misc
 
 import './feature/misc/arrowWarning.js';
 import './feature/misc/giftWaypoints.js';
+// ? funny
+import './feature/misc/funny/leaveOnThrow.js';
+import './feature/misc/funny/banOnThrow.js';
+import './feature/misc/funny/crashOnThrow.js';
 
 // ! QOL
 

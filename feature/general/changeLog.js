@@ -11,6 +11,6 @@ register("step", () => {
     helperFunction.viewChangeLog1_4_0();
   } catch (error) {
     console.log(error);
-    ChatLib.chat(`&AutoWB &6> &c${error}`);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 }).setFps(5)
