@@ -1,4 +1,4 @@
-const emojisAreStupid = JSON.parse(FileLib.read("kath", "/feature/general/emojis/emojis.json"))
+const emojisAreStupid = JSON.parse(FileLib.read("kath", "/data/emojis.json"))
 import PogObject from "../PogData/index"
 import Settings from "./settings";
 import axios from "../axios";
@@ -80,6 +80,9 @@ export const viewChangeLog1_4_0 = () => {
     );
     const antiProfileID = new Message(
       new TextComponent("&7Anti Profile id &8(hover)").setHover("show_text", 'Hides the profile id messages')
+    );
+    const emojis = new Message(
+      new TextComponent("&EMOJIS &8(click)").setHover("show_text", 'run /emojiinfo for more info on emojis').setClick("run_command", `/emojiinfo`)
     );
 
     ChatLib.chat(divider)

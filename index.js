@@ -8,14 +8,15 @@ import './feature/registerCommands.js';
 import './feature/general/discordWarning.js';
 import './feature/general/firstInstall.js';
 import './feature/general/changeLog.js';
-// ? Emojis
-import './feature/general/emojis/chat.js';
 
 // ! Dungeons
 
 import './feature/dungeons/bloodReady.js'
 import './feature/dungeons/cyberBullyDungeons.js'
 import './feature/dungeons/spiritBow.js';
+
+// ! Emojis
+import './feature/emojis/chat.js';
 
 // ! Gardens
 
