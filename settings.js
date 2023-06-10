@@ -67,7 +67,7 @@ class Settings {
     category: "Emojis",
     subcategory: "Info",
   })
-  generalEmojis = false;
+  emojisToggle = false;
 
   @ButtonProperty({
     name: "Emojis texture pack",
