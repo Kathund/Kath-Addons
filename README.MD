@@ -39,6 +39,10 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
   - Arrow Warning - Shows a warning on your screen when you have 50 or 10 arrows left
   - Gift Waypoints - Waypoints to all the possible spawn locations for gifts in the Jerry's workshop event
   - Discord link warning - Shows a warning about scams rats and other stuff like that when someone posts a discord invite link
+  - Funny
+    - Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
+    - Ban on throw - Will show a fake ban message on your screen after sending a message in chat about how you are throwing
+    - Crash on Throw - Will crash your game when throwing
 
 ## Commands
 
@@ -48,8 +52,24 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - `/limbo` - Sends the user to limbo
 - `/discordwarningoff` - Turns off the discord warning
 - `/discordwarningon` - Turns on the discord warning
+- `/wikisearch <search>` - Searches the wiki for the given information
+- `/pt <username>` - Will transfer the party to the given username
+- `/emojiinfo` - Shows an example of how the emojis work
 
 ## Change Log
+
+## v1.4.0
+
+- Added `/wikisearch` - Searches the wiki for the given information
+- Added `/pt <username>` - Will transfer the party to the given username
+- Added more error catching
+- Added Leave on throw - Will auto post a message about how you are throwing into party chat then will leave the party
+- Added Auto ban on throw - Will display a fake ban message when throwing
+- Added Anti Profile id - Hides the profile id messages
+- Added Crash on Throw - Will crash your game when throwing
+- Added EMOJIS - Swaps out `:skull:` for an skull emoji client side
+- Added `/emojiinfo` - Shows an example of how the emojis work
+- Added Auto Update Checker - Will check if your on the latest version. If not it will scream at you
 
 ## v1.3.1 - Bug fixes
 
@@ -102,7 +122,7 @@ A ChatTriggers module that is designed for hypixel skyblock. It has QOL feature 
 - Added Alert Sound - Plays a sound when an alert gets displayed
 - Added quiz fail message to cyber bully dungeons
 
-### v1.0.0
+## v1.0.0
 
 - Added `/kath` to open gui
 - Added New Features

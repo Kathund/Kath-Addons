@@ -3,10 +3,15 @@ import Settings from "../../settings";
 const config = Settings
 
 register('chat', (event) => {
-  var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
-  if (!config.chatCyberBully) return;
-  if (message.startsWith(" ☠") && message.includes("was killed by")) {
-    ChatLib.command(`pc ${message}`);
-    ChatLib.command(`ac ${message}`);
+  try {
+    var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
+    if (!config.chatCyberBully) return;
+    if (message.startsWith(" ☠") && message.includes("was killed by")) {
+      ChatLib.command(`pc ${message}`);
+      ChatLib.command(`ac ${message}`);
+    }
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
 })

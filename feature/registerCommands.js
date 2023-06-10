@@ -2,25 +2,93 @@ import * as helperFunction from "../helperFunctions.js";
 import Settings from "../settings";
 const config = Settings
 
-
-// GUI
+// ! GUI
 register("command", () => config.openGUI()).setName("kath");
 
-// Limbo
+// ! Limbo
 register("command", () => ChatLib.say('§')).setName("limbo");
 
-// Discord commands
+// ! Fast Transfer
+register("command", (...args) => {
+  try {
+    if (args.length === 0) {
+      throw new Error("You cannot transfer to no one");
+    } else if (args[0] === Player.getName()) {
+      throw new Error("You cannot transfer to yourself");
+    } else {
+      ChatLib.chat(`/p transfer ${args[0]}`);
+    }
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
+  }
+}).setName("pt");
 
-// off
+// ! Wiki Search
+register("command", (...args) => {
+  try {
+    let url = "";
+
+    if (config.chatWikiSwapper == true) {
+      url = `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join("+")}`;
+    } else if (config.chatWikiSwapper == false) {
+      url = `https://wiki.hypixel.net/index.php?search=${args.join("+")}`;
+    }
+
+    const wikiMessage = new Message(
+      new TextComponent(`Searched for ${args.join(" ")} using ${config.chatWikiSwapper ? "Fandom Wiki" : "Official Wiki"}`).setClick("open_url", url).setHover("show_text", url)
+    );
+    ChatLib.chat(wikiMessage)
+  } catch (error) {
+    console.log(error);
+    ChatLib.chat(`&dkath &6>&7 &c${error}`);
+  }
+}).setName("wikisearch");
+
+// ! Discord commands
+// ? off
 register("command", () => {
-  helperFunction.data.discordWarningMessage = false
-  helperFunction.data.save();
-  ChatLib.chat(`&2[&dKath&2] &7Turned&l&c off&r&7 discord warning message`)
+  try {
+    helperFunction.data.discordWarningMessage = false
+    helperFunction.data.save();
+    ChatLib.chat(`&dkath &6>&7 Turned&l&c off&r&7 discord warning message`)
+  } catch (error) {
+    console.log(error)
+    ChatLib.chat(`&dkath &6>&7 7c${error}`);
+  }
 }).setName("discordwarningoff");
 
-// on
+// ? on 
 register("command", () => {
-  helperFunction.data.discordWarningMessage = true
-  helperFunction.data.save();
-  ChatLib.chat(`&2[&dKath&2] &7Turned&l&a on&r&7 the discord warning message`)
+  try {
+    helperFunction.data.discordWarningMessage = true
+    helperFunction.data.save();
+    ChatLib.chat(`&dkath &6>&7 Turned&l&a on&r&7 the discord warning message`)
+  } catch (error) {
+    console.log(error)
+    ChatLib.chat(`&dkath &6>&7 7c${error}`);
+  }
 }).setName("discordwarningon");
+
+// ! limbo command hider
+register("chat", (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/)
+
+// ! EMOJIS
+register("command", () => {
+  try {
+    ChatLib.chat(helperFunction.divider)
+    ChatLib.chat('')
+    ChatLib.chat(`&dkath &6> &cWARNING &6- &7Anyone that already has emojis turned on will have an issue with this example. &r&7To fix this, turn off emojis in the kath settings and then run the command again.`)
+    ChatLib.chat('')
+    ChatLib.chat('&dkath &6>&7 INTRODUCING emojis in minecraft!')
+    ChatLib.chat('&dkath &6>&7 These emojis work by converting :skull: to 婓 client side')
+    ChatLib.chat('&dkath &6>&7 Then by using the custom texture pack it will convert 婓 into a skull emoji')
+    ChatLib.chat('&dkath &6>&7 The texture pack is made to be fully customizable so this means you can change what the emojis look like')
+    ChatLib.chat('&dkath &6>&7 The texture pack download can be found in the gui &6- &7/kath &6-> &7emojis &6-> &7Texture Pack Download')
+    ChatLib.chat('')
+    ChatLib.chat(helperFunction.divider)
+  } catch (error) {
+    console.log(error)
+    ChatLib.chat(`&dkath &6>&7 7c${error}`);
+  }
+}).setName("emojiinfo");
