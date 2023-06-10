@@ -77,8 +77,7 @@ class Settings {
     placeholder: "Download",
   })
   emojisDownload() {
-    // ! place holder url
-    java.awt.Desktop.getDesktop().browse(new java.net.URI("https://github.com/Kathund/kath/releases/download/1.3.1/kath-1.3.1.zip"))
+    java.awt.Desktop.getDesktop().browse(new java.net.URI("https://github.com/Kathund/kath/releases/download/v1.4.0/emojiPack.zip"))
   };
 
   // ? Emojis
