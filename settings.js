@@ -5,12 +5,7 @@ import { @Vigilant, @TextProperty, @ButtonProperty, @SwitchProperty, @SliderProp
   getCategoryComparator: () => (a, b) => {
     const categories = ['General', 'Dungeons', 'Emojis', 'Gardens', 'Party', 'Chat', 'QOL', 'Misc', 'Extra Info', 'Change Log'];
     return categories.indexOf(a.name) - categories.indexOf(b.name);
-  },
-  // getSubcategoryComparator: () => (a, b) => {
-  //   const subcategorys = ["General", "Funny", "Info", "Other Projects", "Credits", "Change Log"];
-  //   return subcategorys.indexOf(a.getValue()[0].attributesExt.subcategory) -
-  //     subcategorys.indexOf(b.getValue()[0].attributesExt.subcategory);
-  // },
+  }
 })
 
 class Settings {
@@ -30,7 +25,7 @@ class Settings {
     category: "General",
     subcategory: "Not General",
   })
-  generalShowChangeLog = false;
+  generalShowChangeLog = true;
 
   // ! Dungeons
 
