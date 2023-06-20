@@ -1,5 +1,5 @@
-var currentVersion = JSON.parse(FileLib.read("kath", "metadata.json")).version;
-import * as helperFunction from "../helperFunctions.js";
+var currentVersion = JSON.parse(FileLib.read('kath', 'metadata.json')).version;
+import * as helperFunction from '../helperFunctions.js';
 
 try {
   helperFunction.getLatestVersion().then((latestVersion) => {

@@ -1,20 +1,13 @@
-import * as helperFunction from "../helperFunctions.js";
-import Settings from "../settings";
+import * as helperFunction from '../helperFunctions.js';
+import Settings from '../settings';
 const config = Settings;
 
 // ! GUI
-register("command", () => config.openGUI()).setName("kath");
-register("command", () => console.log(config.generalShowChangeLog)).setName(
-  "checkversion"
-);
-register("command", () => (config.generalShowChangeLog = true)).setName(
-  "settest"
-);
-register("command", () => config.save()).setName("saveconfig");
+register('command', () => config.openGUI()).setName('kath');
 
-register("worldLoad", () => {
+register('worldLoad', () => {
   try {
-    console.log("updating ")
+    console.log('updating ');
     helperFunction.config.generalAlertSound = config.generalAlertSound;
     helperFunction.config.generalShowChangeLog = config.generalShowChangeLog;
     helperFunction.config.dungeonsBloodAlert = config.dungeonsBloodAlert;
@@ -52,7 +45,7 @@ register("worldLoad", () => {
   }
 });
 
-register("gameUnload", () => {
+register('gameUnload', () => {
   try {
     helperFunction.config.generalAlertSound = config.generalAlertSound;
     helperFunction.config.generalShowChangeLog = config.generalShowChangeLog;
@@ -92,18 +85,18 @@ register("gameUnload", () => {
 });
 
 // Save config on game unload
-register("gameUnload", () => helperFunction.config.save());
+register('gameUnload', () => helperFunction.config.save());
 
 // ! Limbo
-register("command", () => ChatLib.say("§")).setName("limbo");
+register('command', () => ChatLib.say('§')).setName('limbo');
 
 // ! Fast Transfer
-register("command", (...args) => {
+register('command', (...args) => {
   try {
     if (args.length === 0) {
-      throw new Error("You cannot transfer to no one");
+      throw new Error('You cannot transfer to no one');
     } else if (args[0] === Player.getName()) {
-      throw new Error("You cannot transfer to yourself");
+      throw new Error('You cannot transfer to yourself');
     } else {
       ChatLib.chat(`/p transfer ${args[0]}`);
     }
@@ -111,40 +104,36 @@ register("command", (...args) => {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
-}).setName("pt");
+}).setName('pt');
 
 // ! Wiki Search
-register("command", (...args) => {
+register('command', (...args) => {
   try {
-    let url = "";
+    let url = '';
 
     if (config.chatWikiSwapper == true) {
-      url = `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join(
-        "+"
-      )}`;
+      url = `https://hypixel-skyblock.fandom.com/wiki/Special:Search?query=${args.join('+')}`;
     } else if (config.chatWikiSwapper == false) {
-      url = `https://wiki.hypixel.net/index.php?search=${args.join("+")}`;
+      url = `https://wiki.hypixel.net/index.php?search=${args.join('+')}`;
     }
 
     const wikiMessage = new Message(
       new TextComponent(
-        `Searched for ${args.join(" ")} using ${
-          config.chatWikiSwapper ? "Fandom Wiki" : "Official Wiki"
-        }`
+        `Searched for ${args.join(' ')} using ${config.chatWikiSwapper ? 'Fandom Wiki' : 'Official Wiki'}`
       )
-        .setClick("open_url", url)
-        .setHover("show_text", url)
+        .setClick('open_url', url)
+        .setHover('show_text', url)
     );
     ChatLib.chat(wikiMessage);
   } catch (error) {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
-}).setName("wikisearch");
+}).setName('wikisearch');
 
 // ! Discord commands
 // ? off
-register("command", () => {
+register('command', () => {
   try {
     helperFunction.data.discordWarningMessage = false;
     helperFunction.data.save();
@@ -153,10 +142,10 @@ register("command", () => {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 7c${error}`);
   }
-}).setName("discordwarningoff");
+}).setName('discordwarningoff');
 
 // ? on
-register("command", () => {
+register('command', () => {
   try {
     helperFunction.data.discordWarningMessage = true;
     helperFunction.data.save();
@@ -165,37 +154,33 @@ register("command", () => {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 7c${error}`);
   }
-}).setName("discordwarningon");
+}).setName('discordwarningon');
 
 // ! limbo command hider
-register("chat", (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/);
+register('chat', (e) => cancel(e)).setCriteria(/^Illegal characters in chat$/);
 
 // ! EMOJIS
-register("command", () => {
+register('command', () => {
   try {
     ChatLib.chat(helperFunction.divider);
-    ChatLib.chat("");
+    ChatLib.chat('');
     ChatLib.chat(
       `&dkath &6> &cWARNING &6- &7Anyone that already has emojis turned on will have an issue with this example. &r&7To fix this, turn off emojis in the kath settings and then run the command again.`
     );
-    ChatLib.chat("");
-    ChatLib.chat("&dkath &6>&7 INTRODUCING emojis in minecraft!");
+    ChatLib.chat('');
+    ChatLib.chat('&dkath &6>&7 INTRODUCING emojis in minecraft!');
+    ChatLib.chat('&dkath &6>&7 These emojis work by converting :skull: to 婓 client side');
+    ChatLib.chat('&dkath &6>&7 Then by using the custom texture pack it will convert 婓 into a skull emoji');
     ChatLib.chat(
-      "&dkath &6>&7 These emojis work by converting :skull: to 婓 client side"
+      '&dkath &6>&7 The texture pack is made to be fully customizable so this means you can change what the emojis look like'
     );
     ChatLib.chat(
-      "&dkath &6>&7 Then by using the custom texture pack it will convert 婓 into a skull emoji"
+      '&dkath &6>&7 The texture pack download can be found in the gui &6- &7/kath &6-> &7emojis &6-> &7Texture Pack Download'
     );
-    ChatLib.chat(
-      "&dkath &6>&7 The texture pack is made to be fully customizable so this means you can change what the emojis look like"
-    );
-    ChatLib.chat(
-      "&dkath &6>&7 The texture pack download can be found in the gui &6- &7/kath &6-> &7emojis &6-> &7Texture Pack Download"
-    );
-    ChatLib.chat("");
+    ChatLib.chat('');
     ChatLib.chat(helperFunction.divider);
   } catch (error) {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 7c${error}`);
   }
-}).setName("emojiinfo");
+}).setName('emojiinfo');

@@ -1,0 +1,17 @@
+{
+  "name": "kath",
+  "version": "1.0.0",
+  "description": "[Chattriggers Module](https://www.chattriggers.com/modules/v/Kath)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.8.8"
+  }
+}

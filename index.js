@@ -1,6 +1,5 @@
-
 // ! IMPORTANT
-import  './feature/checkVersion.js'
+import './feature/checkVersion.js';
 import './feature/registerCommands.js';
 
 // ! General
@@ -11,8 +10,8 @@ import './feature/general/changeLog.js';
 
 // ! Dungeons
 
-import './feature/dungeons/bloodReady.js'
-import './feature/dungeons/cyberBullyDungeons.js'
+import './feature/dungeons/bloodReady.js';
+import './feature/dungeons/cyberBullyDungeons.js';
 import './feature/dungeons/spiritBow.js';
 
 // ! Emojis

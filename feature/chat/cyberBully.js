@@ -1,12 +1,12 @@
-import * as helperFunction from "../../helperFunctions.js";
-import Settings from "../../settings";
-const config = Settings
+import * as helperFunction from '../../helperFunctions.js';
+import Settings from '../../settings';
+const config = Settings;
 
 register('chat', (event) => {
   try {
-    var message = helperFunction.removeColors((ChatLib.getChatMessage(event)).toString());
+    var message = helperFunction.removeColors(ChatLib.getChatMessage(event).toString());
     if (!config.chatCyberBully) return;
-    if (message.startsWith(" ☠") && message.includes("was killed by")) {
+    if (message.startsWith(' ☠') && message.includes('was killed by')) {
       ChatLib.command(`pc ${message}`);
       ChatLib.command(`ac ${message}`);
     }
@@ -14,4 +14,4 @@ register('chat', (event) => {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
-})
+});

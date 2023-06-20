@@ -1,6 +1,6 @@
-import * as helperFunction from "../../helperFunctions.js";
+import * as helperFunction from '../../helperFunctions.js';
 
-register("step", () => {
+register('step', () => {
   try {
     if (helperFunction.data.firstTimeMsg === true) return;
     helperFunction.ShowFirstLoginMessage();
@@ -8,4 +8,4 @@ register("step", () => {
     console.log(error);
     ChatLib.chat(`&dkath &6>&7 &c${error}`);
   }
-}).setFps(5)
+}).setFps(5);

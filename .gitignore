@@ -1,2 +1,4 @@
 data/data.json
 config.toml
+node_modules/
+package-lock.json
